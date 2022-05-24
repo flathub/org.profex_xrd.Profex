@@ -27,21 +27,25 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/qt/6.2/6.2.3/submodules/qt5compat-everywhere-src-6.2.3.tar.xz
-        sha256: 1cf89198cf2cf8a5c15336ccd69fa1f39b779feb64117d6bbf5509c21c123f53
+        url: https://download.qt.io/official_releases/qt/6.2/6.2.4/submodules/qt5compat-everywhere-src-6.2.4.tar.xz
+        sha256: 5de2b9e25bf7de161fbb88ecdd468ed1788bc899392fc05ed80aa590ebb352fa
         x-checker-data:
           type: html
-          url: "https://download.qt.io/official_releases/qt/6.2/"
-          version-pattern: ">([\\d\\.-]*)/<"
-          url-template: "https://download.qt.io/official_releases/qt/6.2/$version/submodules/qt5compat-everywhere-src-$version.tar.xz"
+          url: https://download.qt.io/official_releases/qt/6.2/
+          version-pattern: '>([\d\.-]*)/<'
+          url-template: https://download.qt.io/official_releases/qt/6.2/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
 
     post-install:
       - mv /app/mkspecs /app/lib
       - ln -sr ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/libQt*.so* -t ${FLATPAK_DEST}/lib/
-      - sed -i 's/\\([0-9]\\+\\.[0-9]\\+\\)\\.[0-9]\\+ ${_Qt6.*_FIND_VERSION_EXACT}/\\1/' ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/cmake/Qt6*/Qt6*Config.cmake
-      - sed -e 's@PATHS \"${CMAKE_CURRENT_LIST_DIR}/..\" NO_DEFAULT_PATH@PATHS \"${CMAKE_CURRENT_LIST_DIR}/..\" \"/usr/lib/${CMAKE_CXX_LIBRARY_ARCHITECTURE}/cmake/\" NO_DEFAULT_PATH@' -i ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/cmake/Qt6*/Qt6*Config.cmake
+      - sed -i 's/\\([0-9]\\+\\.[0-9]\\+\\)\\.[0-9]\\+ ${_Qt6.*_FIND_VERSION_EXACT}/\\1/'
+        ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/cmake/Qt6*/Qt6*Config.cmake
+      - sed -e 's@PATHS \"${CMAKE_CURRENT_LIST_DIR}/..\" NO_DEFAULT_PATH@PATHS \"${CMAKE_CURRENT_LIST_DIR}/..\"
+        \"/usr/lib/${CMAKE_CXX_LIBRARY_ARCHITECTURE}/cmake/\" NO_DEFAULT_PATH@' -i
+        ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/cmake/Qt6*/Qt6*Config.cmake
       - sed -e 's@\\($$QT_MODULE_BIN_BASE\\)@\\1 '${FLATPAK_DEST}'/bin @' -i ${FLATPAK_DEST}/lib/mkspecs/modules/*.pri
-      - sed -e 's@\\($$QT_MODULE_INCLUDE_BASE \\)@\\1'${FLATPAK_DEST}'/include @' -i ${FLATPAK_DEST}/lib/mkspecs/modules/*.pri
+      - sed -e 's@\\($$QT_MODULE_INCLUDE_BASE \\)@\\1'${FLATPAK_DEST}'/include @'
+        -i ${FLATPAK_DEST}/lib/mkspecs/modules/*.pri
       - sed -e 's@$$QT_MODULE_INCLUDE_BASE/@'${FLATPAK_DEST}'/include/@g' -i ${FLATPAK_DEST}/lib/mkspecs/modules/*.pri
       - sed -e 's@$$QT_MODULE_LIB_BASE@'${FLATPAK_DEST}'/lib@g' -i ${FLATPAK_DEST}/lib/mkspecs/modules/*.pri
 
@@ -55,8 +59,8 @@ modules:
         sha256: 6c987bacc9b1ef8b4bd6569f13f193f24c0d61b7c4a8dd2cdeaecdf9352fa6a6
         x-checker-data:
           type: html
-          url: "https://www.profex-xrd.org/?page_id=63"
-          pattern: "(https://www.profex-xrd.org/.+/bgmn-([\\d\\.]+\\d)-x86_64.tar.gz)"
+          url: https://www.profex-xrd.org/?page_id=63
+          pattern: (https://www.profex-xrd.org/.+/bgmn-([\d\.]+\d)-x86_64.tar.gz)
 
   - name: bgmn-templates
     buildsystem: simple
@@ -69,8 +73,8 @@ modules:
         sha256: 7c69397782f3fbac340a88f0b923eae10d5ec8d89aa504cb55a85a3902694014
         x-checker-data:
           type: html
-          url: "https://www.profex-xrd.org/?page_id=63"
-          pattern: "(https://www.profex-xrd.org/.+/BGMN-Templates-([\\d\\.]+\\d).tar.gz)"
+          url: https://www.profex-xrd.org/?page_id=63
+          pattern: (https://www.profex-xrd.org/.+/BGMN-Templates-([\d\.]+\d).tar.gz)
 
   - name: profex
     buildsystem: qmake
@@ -79,16 +83,17 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2022/03/profex-5.0.1.tar.gz
-        sha256: 333d77a4b8690183bf43df1776fa4976c330f09af4799c0360bc694e47cf0c7a
+        url: https://www.profex-xrd.org/wp-content/uploads/2022/05/profex-5.0.2.tar.gz
+        sha256: 2e29c90aabbea3ae075ef2d7e4cbf237fe20b36d05db637a735b3b25fd8e6670
         x-checker-data:
           type: html
-          url: "https://www.profex-xrd.org/?page_id=63"
-          pattern: "(https://www.profex-xrd.org/.+/profex-([\\d\\.]+\\d).tar.gz)"
+          url: https://www.profex-xrd.org/?page_id=63
+          pattern: (https://www.profex-xrd.org/.+/profex-([\d\.]+\d).tar.gz)
       - type: patch
         path: bgmnbackendconfig.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex/icons/profex5-512x512.png /app/share/icons/hicolor/512x512/apps/profex5.png
-      - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/org.profex_xrd.Profex.appdata.xml -t /app/share/appdata
+      - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/org.profex_xrd.Profex.appdata.xml
+        -t /app/share/appdata
