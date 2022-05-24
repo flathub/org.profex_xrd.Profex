@@ -29,6 +29,12 @@ modules:
       - type: archive
         url: https://download.qt.io/official_releases/qt/6.2/6.2.3/submodules/qt5compat-everywhere-src-6.2.3.tar.xz
         sha256: 1cf89198cf2cf8a5c15336ccd69fa1f39b779feb64117d6bbf5509c21c123f53
+        x-checker-data:
+          type: html
+          url: "https://download.qt.io/official_releases/qt/6.2/"
+          version-pattern: ">([\\d\\.-]*)/<"
+          url-template: "https://download.qt.io/official_releases/qt/6.2/$version/submodules/qt5compat-everywhere-src-$version.tar.xz"
+
     post-install:
       - mv /app/mkspecs /app/lib
       - ln -sr ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/libQt*.so* -t ${FLATPAK_DEST}/lib/
@@ -47,6 +53,10 @@ modules:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2017/12/bgmn-4.2.23-x86_64.tar.gz
         sha256: 6c987bacc9b1ef8b4bd6569f13f193f24c0d61b7c4a8dd2cdeaecdf9352fa6a6
+        x-checker-data:
+          type: html
+          url: "https://www.profex-xrd.org/?page_id=63"
+          pattern: "(https://www.profex-xrd.org/.+/bgmn-([\\d\\.]+\\d)-x86_64.tar.gz)"
 
   - name: bgmn-templates
     buildsystem: simple
@@ -57,6 +67,10 @@ modules:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2022/01/BGMN-Templates-220129.tar.gz
         sha256: 7c69397782f3fbac340a88f0b923eae10d5ec8d89aa504cb55a85a3902694014
+        x-checker-data:
+          type: html
+          url: "https://www.profex-xrd.org/?page_id=63"
+          pattern: "(https://www.profex-xrd.org/.+/BGMN-Templates-([\\d\\.]+\\d).tar.gz)"
 
   - name: profex
     buildsystem: qmake
@@ -67,6 +81,10 @@ modules:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2022/03/profex-5.0.1.tar.gz
         sha256: 333d77a4b8690183bf43df1776fa4976c330f09af4799c0360bc694e47cf0c7a
+        x-checker-data:
+          type: html
+          url: "https://www.profex-xrd.org/?page_id=63"
+          pattern: "(https://www.profex-xrd.org/.+/profex-([\\d\\.]+\\d).tar.gz)"
       - type: patch
         path: bgmnbackendconfig.patch
     post-install:
