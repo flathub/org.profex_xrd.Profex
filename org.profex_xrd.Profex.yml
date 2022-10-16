@@ -55,8 +55,8 @@ modules:
       - install -Dv * -t /app/bgmn
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2017/12/bgmn-4.2.23-x86_64.tar.gz
-        sha256: 6c987bacc9b1ef8b4bd6569f13f193f24c0d61b7c4a8dd2cdeaecdf9352fa6a6
+        url: https://www.profex-xrd.org/wp-content/uploads/2022/10/bgmn-4.2.23-x86_64.tar.gz
+        sha256: b8da94c7b83800f12ea52a10d62f137ddd7eaf17f4cfb2992af3c174d47e6970
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/?page_id=63
@@ -83,8 +83,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2022/05/profex-5.0.2.tar.gz
-        sha256: 2e29c90aabbea3ae075ef2d7e4cbf237fe20b36d05db637a735b3b25fd8e6670
+        url: https://www.profex-xrd.org/wp-content/uploads/2022/10/profex-5.1.0.tar.gz
+        sha256: 85c871447977156de6407647b7b6530396c4fc6409d984d2e7ad2e96732083d1
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/?page_id=63
