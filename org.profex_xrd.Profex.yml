@@ -14,7 +14,6 @@ cleanup:
   - /include
   - /modules
   - /lib/mkspecs
-  - /lib/debug
   - /lib/*/cmake
   - /lib/*/metatypes
   - /qml
