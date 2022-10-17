@@ -1,6 +1,6 @@
 app-id: org.profex_xrd.Profex
 runtime: org.kde.Platform
-runtime-version: '6.2'
+runtime-version: '6.3'
 sdk: org.kde.Sdk
 command: profex
 rename-icon: profex5
@@ -14,7 +14,6 @@ cleanup:
   - /include
   - /modules
   - /lib/mkspecs
-  - /lib/debug
   - /lib/*/cmake
   - /lib/*/metatypes
   - /qml
@@ -27,13 +26,13 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/qt/6.2/6.2.4/submodules/qt5compat-everywhere-src-6.2.4.tar.xz
-        sha256: 5de2b9e25bf7de161fbb88ecdd468ed1788bc899392fc05ed80aa590ebb352fa
+        url: https://download.qt.io/official_releases/qt/6.3/6.3.2/submodules/qt5compat-everywhere-src-6.3.2.tar.xz
+        sha256: 91a3ac0f3f87e4103afa5834ccbecff9374daf716fab362d0c5e2d6ab98560cc
         x-checker-data:
           type: html
-          url: https://download.qt.io/official_releases/qt/6.2/
+          url: https://download.qt.io/official_releases/qt/6.3/
           version-pattern: '>([\d\.-]*)/<'
-          url-template: https://download.qt.io/official_releases/qt/6.2/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
+          url-template: https://download.qt.io/official_releases/qt/6.3/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
 
     post-install:
       - mv /app/mkspecs /app/lib
@@ -55,8 +54,8 @@ modules:
       - install -Dv * -t /app/bgmn
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2017/12/bgmn-4.2.23-x86_64.tar.gz
-        sha256: 6c987bacc9b1ef8b4bd6569f13f193f24c0d61b7c4a8dd2cdeaecdf9352fa6a6
+        url: https://www.profex-xrd.org/wp-content/uploads/2022/10/bgmn-4.2.23-x86_64.tar.gz
+        sha256: b8da94c7b83800f12ea52a10d62f137ddd7eaf17f4cfb2992af3c174d47e6970
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/?page_id=63
@@ -66,15 +65,11 @@ modules:
     buildsystem: simple
     build-commands:
       - mkdir /app/BGMN-Templates
-      - mv {Devices,Reports,Structures,Wavelengths} /app/BGMN-Templates
+      - mv {BGMN-Structures,Devices,Reports,Structures,Wavelengths} /app/BGMN-Templates
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2022/01/BGMN-Templates-220129.tar.gz
-        sha256: 7c69397782f3fbac340a88f0b923eae10d5ec8d89aa504cb55a85a3902694014
-        x-checker-data:
-          type: html
-          url: https://www.profex-xrd.org/?page_id=63
-          pattern: (https://www.profex-xrd.org/.+/BGMN-Templates-([\d\.]+\d).tar.gz)
+        url: https://www.profex-xrd.org/wp-content/uploads/2022/10/BGMN-Templates-221011-MacLinux.tar.gz
+        sha256: 983d405e7e9d34cb455ff1f3314539fbb9e69ba72aff5a4af8b0973f56679ea5
 
   - name: profex
     buildsystem: qmake
@@ -83,8 +78,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2022/05/profex-5.0.2.tar.gz
-        sha256: 2e29c90aabbea3ae075ef2d7e4cbf237fe20b36d05db637a735b3b25fd8e6670
+        url: https://www.profex-xrd.org/wp-content/uploads/2022/10/profex-5.1.0.tar.gz
+        sha256: 85c871447977156de6407647b7b6530396c4fc6409d984d2e7ad2e96732083d1
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/?page_id=63
