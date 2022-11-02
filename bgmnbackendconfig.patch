@@ -1,8 +1,24 @@
 diff --git a/profex/projectWidget/bgmnbackendconfig.cpp b/profex/projectWidget/bgmnbackendconfig.cpp
-index 40089b6..fdd65d4 100644
+index 40089b6..6477e95 100644
 --- a/profex/projectWidget/bgmnbackendconfig.cpp
 +++ b/profex/projectWidget/bgmnbackendconfig.cpp
-@@ -233,7 +233,7 @@ int BgmnBackendConfig::guessExecutablesUnix()
+@@ -218,22 +218,18 @@ bool BgmnBackendConfig::guessRepositories()
+ int BgmnBackendConfig::guessExecutablesUnix()
+ {
+     QFileInfo pe(qApp->applicationFilePath());
+-    QDir ped(pe.absoluteDir());
+-    ped.cdUp();
+-    ped.cd("BGMNwin");
+-
+     int errors = 0;
+ 
+     // scan these directories, use the first one that was found
+     // note: the order of scanning determines the priority of the version that will be used
+     // if several installations are found
+     QVector<QDir> defaultExeLocations;
+-    defaultExeLocations << ped.absolutePath()
++    defaultExeLocations << pe.absolutePath()
+             << QDir("/opt/Profex-BGMN/BGMNwin")
              << QDir(QString("%1/BGMN").arg(QDir::homePath()))
              << QDir(QString("%1/BGMNwin").arg(QDir::homePath()))
              << QDir("/opt/bgmnwin")
@@ -11,11 +27,20 @@ index 40089b6..fdd65d4 100644
              << QDir("/opt/bgmn-4.2.23")
              << QDir("/opt/bgmn-4.2.22")
              << QDir("/opt/BGMNwin")
-@@ -406,7 +406,7 @@ int BgmnBackendConfig::guessRepositoriesUnix()
+@@ -398,15 +394,11 @@ int BgmnBackendConfig::guessExecutablesMac()
+ int BgmnBackendConfig::guessRepositoriesUnix()
+ {
+     QFileInfo pe(qApp->applicationFilePath());
+-    QDir ped(pe.absoluteDir());
+-    ped.cdUp();
+-
+     int errors = 0;
+ 
      QVector<QDir> defaultRepoLocations;
-     defaultRepoLocations << ped
-                          << QDir("/opt/Profex-BGMN/BGMN-Templates")
+-    defaultRepoLocations << ped
+-                         << QDir("/opt/Profex-BGMN/BGMN-Templates")
 -                         << QDir("/opt/BGMN-Templates")
++    defaultRepoLocations << QDir("/opt/Profex-BGMN/BGMN-Templates")
 +                         << QDir("/app/BGMN-Templates")
                           << QDir(QString("%1/Documents/BGMN-Templates").arg(QDir::homePath()))
                           << createUserRepos();
