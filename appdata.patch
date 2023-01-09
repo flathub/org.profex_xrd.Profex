@@ -1,0 +1,24 @@
+diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
+index 4bcdd4e..74493ce 100644
+--- a/org.profex_xrd.Profex.appdata.xml
++++ b/org.profex_xrd.Profex.appdata.xml
+@@ -53,6 +53,19 @@
+     </screenshot>
+   </screenshots>
+   <releases>
++    <release version="5.1.1" date="2023-01-07">
++      <description>
++        <p>Bugfix release</p>
++        <ul>
++          <li>Avoid duplication of instruments when opening the add/remove phases dialog multiple times</li>
++          <li>Do not list text blocks multiple times when opening the preferences multiple times</li>
++          <li>Fixed several bugs in CIF import</li>
++          <li>New export filter for ASCII text format</li>
++          <li>Fixed bug in UDF import filter</li>
++          <li>Fixed bugs in export of waterfall plots</li>
++        </ul>
++      </description>
++    </release>
+   <release version="5.1.0" date="2022-10-08">
+     <description>
+     <p>Major feature upgrade</p>
