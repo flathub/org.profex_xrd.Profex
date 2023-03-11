@@ -56,10 +56,6 @@ modules:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2022/10/bgmn-4.2.23-x86_64.tar.gz
         sha256: b8da94c7b83800f12ea52a10d62f137ddd7eaf17f4cfb2992af3c174d47e6970
-        x-checker-data:
-          type: html
-          url: https://www.profex-xrd.org/?page_id=63
-          pattern: (https://www.profex-xrd.org/.+/bgmn-([\d\.]+\d)-x86_64.tar.gz)
 
   - name: bgmn-templates
     buildsystem: simple
