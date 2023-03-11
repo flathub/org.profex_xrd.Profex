@@ -1,0 +1,22 @@
+diff --git a/profex.pro b/profex.pro
+index 5266dcd..b844594 100644
+--- a/profex.pro
++++ b/profex.pro
+@@ -7,8 +7,6 @@ SUBDIRS = zlib \
+     waterfall \
+     electrondensity \
+     scantracer \
+-    cmdtools/pxanytoxy \
+-    cmdtools/pxapplypreset \
+     cmdtools/pxcifindex
+ 
+ profex.depends = zlib quazip libXrdIO
+@@ -16,8 +14,6 @@ waterfall.depends = zlib quazip libXrdIO
+ electrondensity.depends = zlib quazip libXrdIO
+ scantracer.depends = zlib quazip libXrdIO
+ pxcifindex.depends = zlib quazip libXrdIO
+-pxanytoxy.depends = zlib quazip libXrdIO
+-pxapplypreset.depends = zlib quazip libXrdIO
+ 
+ # make these files show up in Qt Creator
+ OTHER_FILES += .gitignore \
