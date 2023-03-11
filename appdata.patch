@@ -1,24 +1,33 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 4bcdd4e..74493ce 100644
+index 87f7c34..13768a7 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
-@@ -53,6 +53,19 @@
+@@ -53,6 +53,28 @@
      </screenshot>
    </screenshots>
    <releases>
-+    <release version="5.1.1" date="2023-01-07">
++    <release version="5.2.0" date="2023-03-05">
 +      <description>
-+        <p>Bugfix release</p>
++        <p>Feature release</p>
 +        <ul>
-+          <li>Avoid duplication of instruments when opening the add/remove phases dialog multiple times</li>
-+          <li>Do not list text blocks multiple times when opening the preferences multiple times</li>
-+          <li>Fixed several bugs in CIF import</li>
-+          <li>New export filter for ASCII text format</li>
-+          <li>Fixed bug in UDF import filter</li>
-+          <li>Fixed bugs in export of waterfall plots</li>
++          <li>New operation qualification (OQ) wizard</li>
++          <li>Presets are categorized in menues</li>
++          <li>New tool to simulate tube tail measurements</li>
++          <li>Applying presets saves control files immediately</li>
++          <li>Fixed bug in Excel export presets</li>
++          <li>Fixed bug in peaklist with wrong normalization of intensities</li>
++          <li>Fixed bug in export of CIF files from LST files</li>
++          <li>Export Uaniso to CIF files instead of beta, as recommended by the CIF dictionary</li>
++          <li>Fixed crash when indexing structure repositories when indexing is disabled for some repositories</li>
++          <li>Re-arranged elements for control file templates in graphical instrument editor</li>
++          <li>Add LAMBDA when using a tube tail measurement in the instrument editor</li>
++          <li>Fixed duplicate preset entries due to upper- and lower-case file names</li>
++          <li>Fixed bug in ICDD XML importer when parsing hexagonal/rhombohedral space groups</li>
++          <li>New import filter for Rigaku Smartlab XML file format</li>
++          <li>Re-introduced toggling of phase visibility with Ctrl+0</li>
 +        </ul>
 +      </description>
 +    </release>
-   <release version="5.1.0" date="2022-10-08">
+   <release version="5.1.1" date="2023-01-07">
      <description>
-     <p>Major feature upgrade</p>
+     <p>Bugfix release</p>

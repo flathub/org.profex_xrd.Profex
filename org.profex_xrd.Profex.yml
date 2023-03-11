@@ -1,6 +1,6 @@
 app-id: org.profex_xrd.Profex
 runtime: org.kde.Platform
-runtime-version: '6.3'
+runtime-version: '6.4'
 sdk: org.kde.Sdk
 command: profex
 rename-icon: profex5
@@ -26,13 +26,13 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/qt/6.3/6.3.2/submodules/qt5compat-everywhere-src-6.3.2.tar.xz
-        sha256: 91a3ac0f3f87e4103afa5834ccbecff9374daf716fab362d0c5e2d6ab98560cc
+        url: https://download.qt.io/official_releases/qt/6.4/6.4.2/submodules/qt5compat-everywhere-src-6.4.2.tar.xz
+        sha256: f51f505c8e985b51b7d733e27d782c6fce181beef53364acb0368cc892c4b792
         x-checker-data:
           type: html
-          url: https://download.qt.io/official_releases/qt/6.3/
+          url: https://download.qt.io/official_releases/qt/6.4/
           version-pattern: '>([\d\.-]*)/<'
-          url-template: https://download.qt.io/official_releases/qt/6.3/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
+          url-template: https://download.qt.io/official_releases/qt/6.4/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
 
     post-install:
       - mv /app/mkspecs /app/lib
@@ -56,10 +56,6 @@ modules:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2022/10/bgmn-4.2.23-x86_64.tar.gz
         sha256: b8da94c7b83800f12ea52a10d62f137ddd7eaf17f4cfb2992af3c174d47e6970
-        x-checker-data:
-          type: html
-          url: https://www.profex-xrd.org/?page_id=63
-          pattern: (https://www.profex-xrd.org/.+/bgmn-([\d\.]+\d)-x86_64.tar.gz)
 
   - name: bgmn-templates
     buildsystem: simple
@@ -78,8 +74,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2023/01/profex-5.1.1.tar.gz
-        sha256: 0284e658518dc27984e883bd5c2b68e23732b487726a782c1ce482c49da80018
+        url: https://www.profex-xrd.org/wp-content/uploads/2023/03/profex-5.2.0.tar.gz
+        sha256: 3661ea7c93c1fe887962a1d6abe4c57da219fd52c4df030718d39cebb2773625
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/?page_id=63
@@ -88,6 +84,8 @@ modules:
         path: bgmnbackendconfig.patch
       - type: patch
         path: appdata.patch
+      - type: patch
+        path: profex.pro.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
