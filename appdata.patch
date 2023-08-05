@@ -1,11 +1,96 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..13768a7 100644
+index 87f7c34..96d152d 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
-@@ -53,6 +53,28 @@
+@@ -53,60 +53,116 @@
      </screenshot>
    </screenshots>
    <releases>
+-  <release version="5.1.1" date="2023-01-07">
+-    <description>
+-    <p>Bugfix release</p>
+-      <ul>
+-        <li>Avoid duplication of instruments when opening the add/remove phases dialog multiple times</li>
+-        <li>Do not list text blocks multiple times when opening the preferences multiple times</li>
+-        <li>Fixed several bugs in CIF import</li>
+-        <li>New export filter for ASCII text format</li>
+-        <li>Fixed bug in UDF import filter</li>
+-        <li>Fixed bugs in export of waterfall plots</li>
+-      </ul>
+-    </description>
+-  </release>
+-  <release version="5.1.0" date="2022-10-08">
+-    <description>
+-    <p>Major feature upgrade</p>
+-      <ul>
+-        <li>Allow editing of source files in the structure import dialog</li>
+-        <li>Fixed an error in CIF import if several sites use the same _atom_site_label</li>
+-        <li>Fixed wrong handling of sample height displacement in peak integral module</li>
+-        <li>Context help in various modules</li>
+-        <li>Multi-range curve fitting</li>
+-        <li>Added support for divergenceCorrection data in xrdml files</li>
+-        <li>Export of electron density map raw data</li>
+-        <li>Fixed drawing issues in electron density map dialog</li>
+-        <li>Moved favorites selection from preferences dialog to tools -> browse reference structures</li>
+-        <li>Tool tips added in various dialogs</li>
+-        <li>New selection box to specify the reference structure repository</li>
+-        <li>Better error handling if creating projects goes wrong</li>
+-        <li>Double-click on status bar opens dialogs</li>
+-        <li>Option to show the wavelength in the x-axis label</li>
+-        <li>Option to open STR files after adding new phases</li>
+-        <li>Fixed crash when activating the inspector cursor</li>
+-        <li>Fix chemistry table to work with internal standard quantifications</li>
+-        <li>Improved CIF import to work with SPF SpringerMaterials ISP files</li>
+-        <li>Fixed parsing error for Bruker raw V4 and Rigaku RasX files</li>
+-        <li>More Dectris detectors added to the detector configuration page in the instrument editor</li>
+-        <li>Fixed wrong scaling and blurry fonts on high-DPI displays</li>
+-        <li>Show-legend action removed from the context menu (use the View menu instead)</li>
+-        <li>Fixed bugs in exported SVG files</li>
+-        <li>Added Q scale for x-axis</li>
+-        <li>Dynamically adjust significant digits in axis labels according to zoom level</li>
+-        <li>Open STR file of active scan from graph using Ctrl+T</li>
+-        <li>Open STR files under cursor in SAV or LST file using Ctrl+T</li>
+-        <li>Jump to phase in LST file when selecting a graph in the plot options list</li>
+-        <li>Toggle LeBail mode with F5/F6 key</li>
+-        <li>Show scan name as tool tip when hovering the mouse over a scan</li>
+-        <li>Option to draw a highlight rectangle behind the hkl lines of the active scan</li>
+-      </ul>
+-    </description>
+-  </release>
++    <release version="5.2.2" date="2023-06-11">
++      <description>
++        <p>Bugfix and minor feature release</p>
++        <ul>
++          <li>Show iterations and Chi^2 in project list</li>
++          <li>Context menu to show/hide columns in project list</li>
++          <li>Fixed regression with search-match refusing to run due to missing instrument or wavelength selection despite using project settings</li>
++          <li>Fixed regression with closing projects from project list context menu not working</li>
++          <li>Removed option to select light or dark GUI theme from preferences</li>
++          <li>Added option to select graph background color to preferences → Graph → Appearance</li>]
++        </ul>
++      </description>
++    </release>
++    <release version="5.2.1" date="2023-05-09">
++      <description>
++        <p>Bugfix release</p>
++        <ul>
++          <li>moved configuration of COD database from structure import dialog to preferences dialog</li>
++          <li>fixed issues with CIF import whe CIF files don't specify a phase name</li>
++          <li>change scan color and style directly from context menu in plot options list</li>
++          <li>fixed a crash when changing y-axis scaling on the fly, then changing scan styles in the preferences</li>
++          <li>new function to export peak lists of all open projects at once</li>
++          <li>fixed calculation of peak intensity in peak list</li>
++          <li>improved filtering of peak list</li>
++          <li>new import filter for all files (.) to auto-detect the format</li>
++          <li>instrument selection boxes in add-remove dialog and search-match module are now editable and use auto-completion</li>
++          <li>improved handling of instrument selection in add-remove dialog and search-match module when no specific instrument is selected</li>
++          <li>fixed scan offsets randomly not being applied in plot options list</li>
++          <li>minor GUI improvements</li>
++          <li>context help text for additional modules added</li>
++          <li>check for updates on Windows</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.2.0" date="2023-03-05">
 +      <description>
 +        <p>Feature release</p>
@@ -28,6 +113,70 @@ index 87f7c34..13768a7 100644
 +        </ul>
 +      </description>
 +    </release>
-   <release version="5.1.1" date="2023-01-07">
-     <description>
-     <p>Bugfix release</p>
++    <release version="5.1.1" date="2023-01-07">
++      <description>
++        <p>Bugfix release</p>
++        <ul>
++          <li>Avoid duplication of instruments when opening the add/remove phases dialog multiple times</li>
++          <li>Do not list text blocks multiple times when opening the preferences multiple times</li>
++          <li>Fixed several bugs in CIF import</li>
++          <li>New export filter for ASCII text format</li>
++          <li>Fixed bug in UDF import filter</li>
++          <li>Fixed bugs in export of waterfall plots</li>
++        </ul>
++      </description>
++    </release>
++    <release version="5.1.0" date="2022-10-08">
++      <description>
++        <p>Major feature upgrade</p>
++        <ul>
++          <li>Allow editing of source files in the structure import dialog</li>
++          <li>Fixed an error in CIF import if several sites use the same _atom_site_label</li>
++          <li>Fixed wrong handling of sample height displacement in peak integral module</li>
++          <li>Context help in various modules</li>
++          <li>Multi-range curve fitting</li>
++          <li>Added support for divergenceCorrection data in xrdml files</li>
++          <li>Export of electron density map raw data</li>
++          <li>Fixed drawing issues in electron density map dialog</li>
++          <li>Moved favorites selection from preferences dialog to tools -> browse reference structures</li>
++          <li>Tool tips added in various dialogs</li>
++          <li>New selection box to specify the reference structure repository</li>
++          <li>Better error handling if creating projects goes wrong</li>
++          <li>Double-click on status bar opens dialogs</li>
++          <li>Option to show the wavelength in the x-axis label</li>
++          <li>Option to open STR files after adding new phases</li>
++          <li>Fixed crash when activating the inspector cursor</li>
++          <li>Fix chemistry table to work with internal standard quantifications</li>
++          <li>Improved CIF import to work with SPF SpringerMaterials ISP files</li>
++          <li>Fixed parsing error for Bruker raw V4 and Rigaku RasX files</li>
++          <li>More Dectris detectors added to the detector configuration page in the instrument editor</li>
++          <li>Fixed wrong scaling and blurry fonts on high-DPI displays</li>
++          <li>Show-legend action removed from the context menu (use the View menu instead)</li>
++          <li>Fixed bugs in exported SVG files</li>
++          <li>Added Q scale for x-axis</li>
++          <li>Dynamically adjust significant digits in axis labels according to zoom level</li>
++          <li>Open STR file of active scan from graph using Ctrl+T</li>
++          <li>Open STR files under cursor in SAV or LST file using Ctrl+T</li>
++          <li>Jump to phase in LST file when selecting a graph in the plot options list</li>
++          <li>Toggle LeBail mode with F5/F6 key</li>
++          <li>Show scan name as tool tip when hovering the mouse over a scan</li>
++          <li>Option to draw a highlight rectangle behind the hkl lines of the active scan</li>
++        </ul>
++      </description>
++    </release>
+     <release version="5.0.2" date="2022-05-21">
+       <description>
+-      <p>Minor feature upgrade</p>
++        <p>Minor feature upgrade</p>
+         <ul>
+           <li>Select scans by holding Shift and clicking on the graph</li>
+           <li>Fixed selection of scans during running refinements</li>
+@@ -122,7 +178,7 @@
+     </release>
+     <release version="5.0.1" date="2022-03-13">
+       <description>
+-      <p>Major feature upgrade</p>
++        <p>Major feature upgrade</p>
+         <ul>
+           <li>Removed option to customize quantity goal nomenclature in preferences</li>
+           <li>Automatically run verification when opening CIF files in the structure import dialog</li>

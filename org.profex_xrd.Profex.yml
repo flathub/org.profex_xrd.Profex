@@ -1,6 +1,6 @@
 app-id: org.profex_xrd.Profex
 runtime: org.kde.Platform
-runtime-version: '6.4'
+runtime-version: '6.5'
 sdk: org.kde.Sdk
 command: profex
 rename-icon: profex5
@@ -26,13 +26,13 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/qt/6.4/6.4.3/submodules/qt5compat-everywhere-src-6.4.3.tar.xz
-        sha256: d4b249abb823d575eee9045c24d924ba8d1276e6be7735b287689991d998aa7a
+        url: https://download.qt.io/official_releases/qt/6.5/6.5.1/submodules/qt5compat-everywhere-src-6.5.1.tar.xz
+        sha256: ae992b295fefabef2445beb3a8ec31c40fa0fb2c01603eaf2acfdb4a0054fb83
         x-checker-data:
           type: html
-          url: https://download.qt.io/official_releases/qt/6.4/
+          url: https://download.qt.io/official_releases/qt/6.5/
           version-pattern: '>([\d\.-]*)/<'
-          url-template: https://download.qt.io/official_releases/qt/6.4/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
+          url-template: https://download.qt.io/official_releases/qt/6.5/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
 
     post-install:
       - mv /app/mkspecs /app/lib
@@ -74,11 +74,11 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2023/03/profex-5.2.0.tar.gz
-        sha256: f2a1f8d7c4b1b8c5075a97884a8666dd90724fa015d2a1ac37c091ab1aff3e97
+        url: https://www.profex-xrd.org/wp-content/uploads/2023/06/profex-5.2.2.tar.gz
+        sha256: 69d6d5f52509bf9b68ef7a09e8e80b3d5f9209e3d6d5d31c6346277bbd906d19
         x-checker-data:
           type: html
-          url: https://www.profex-xrd.org/?page_id=63
+          url: https://www.profex-xrd.org/download/linux-2/
           pattern: (https://www.profex-xrd.org/.+/profex-([\d\.]+\d).tar.gz)
       - type: patch
         path: bgmnbackendconfig.patch
