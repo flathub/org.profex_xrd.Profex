@@ -23,6 +23,9 @@ cleanup:
 modules:
   - name: qt6-core5compat
     buildsystem: cmake-ninja
+    build-options:
+      config-opts:
+        - -DQT_NO_PACKAGE_VERSION_CHECK=TRUE
     builddir: true
     sources:
       - type: archive
@@ -33,7 +36,6 @@ modules:
           url: https://download.qt.io/official_releases/qt/6.5/
           version-pattern: '>([\d\.-]*)/<'
           url-template: https://download.qt.io/official_releases/qt/6.5/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
-
     post-install:
       - mv /app/mkspecs /app/lib
       - ln -sr ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/libQt*.so* -t ${FLATPAK_DEST}/lib/
