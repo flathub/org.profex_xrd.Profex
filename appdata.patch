@@ -1,8 +1,20 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..96d152d 100644
+index 87f7c34..18de10d 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
-@@ -53,60 +53,116 @@
+@@ -6,8 +6,9 @@
+   <name>Profex</name>
+   <developer_name>Nicola Döbelin</developer_name>
+   <url type="homepage">https://www.profex-xrd.org/</url>
+-  <url type="faq">https://www.profex-xrd.org/?page_id=831</url>
+-  <url type="contact">https://www.profex-xrd.org/?page_id=139</url>
++  <url type="faq">https://www.profex-xrd.org/faq/</url>
++  <url type="help">https://www.profex-xrd.org/tutorials/</url>
++  <url type="contact">https://www.profex-xrd.org/contact/</url>
+   <summary>Open Source XRD and Rietveld Refinement</summary>
+   <description>
+     <p>
+@@ -53,60 +54,146 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -57,6 +69,36 @@ index 87f7c34..96d152d 100644
 -      </ul>
 -    </description>
 -  </release>
++    <release version="5.2.4" date="2023-10-26">
++      <description>
++        <p>Bugfix and minor feature release</p>
++        <ul>
++          <li>Fixed icons disappearing after closing the preferences dialog</li>
++          <li>Fixed COD database connection not being restored after program restart</li>
++          <li>Improved default paths when selecting repository locations in the preferences dialog</li>
++        </ul>
++      </description>
++    </release>
++    <release version="5.2.3" date="2023-09-22">
++      <description>
++        <p>Bugfix and minor feature release</p>
++        <ul>
++          <li>Fixed accidentally enabled instrument configuration box in add-remove dialog</li>
++          <li>Removed option to select composition mode of graphs</li>
++          <li>Fixed filled color of graphs in dark mode</li>
++          <li>Added custom wavelength selection to absorption coefficient dialog</li>
++          <li>Added key sequences to navigate graphs</li>
++          <li>Option to specify a local COD CIF repository instead of using the online repository.</li>
++          <li>Show proper error message when downloading CIF files from COD fails</li>
++          <li>New Tool to calculate lattice plane spacings</li>
++          <li>Improved context help system</li>
++          <li>Ignore mouse events on the graph outside the plot if they don't make sense</li>
++          <li>Improved CIF import</li>
++          <li>Fixed bug in GNR ESG files with negative 2theta values</li>
++          <li>Fixed Rigaku XML import of files with multiple scans</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.2.2" date="2023-06-11">
 +      <description>
 +        <p>Bugfix and minor feature release</p>
@@ -66,7 +108,7 @@ index 87f7c34..96d152d 100644
 +          <li>Fixed regression with search-match refusing to run due to missing instrument or wavelength selection despite using project settings</li>
 +          <li>Fixed regression with closing projects from project list context menu not working</li>
 +          <li>Removed option to select light or dark GUI theme from preferences</li>
-+          <li>Added option to select graph background color to preferences → Graph → Appearance</li>]
++          <li>Added option to select graph background color to preferences → Graph → Appearance</li>
 +        </ul>
 +      </description>
 +    </release>
@@ -171,7 +213,7 @@ index 87f7c34..96d152d 100644
          <ul>
            <li>Select scans by holding Shift and clicking on the graph</li>
            <li>Fixed selection of scans during running refinements</li>
-@@ -122,7 +178,7 @@
+@@ -122,7 +209,7 @@
      </release>
      <release version="5.0.1" date="2022-03-13">
        <description>

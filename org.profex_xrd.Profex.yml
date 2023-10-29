@@ -58,6 +58,10 @@ modules:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2022/10/bgmn-4.2.23-x86_64.tar.gz
         sha256: b8da94c7b83800f12ea52a10d62f137ddd7eaf17f4cfb2992af3c174d47e6970
+        x-checker-data:
+          type: html
+          url: https://www.profex-xrd.org/download/linux-2/
+          pattern: (https://www.profex-xrd.org/.+/bgmn-([\d\.]+\d)-x86_64.tar.gz)
 
   - name: bgmn-templates
     buildsystem: simple
@@ -68,6 +72,10 @@ modules:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2022/10/BGMN-Templates-221011-MacLinux.tar.gz
         sha256: 983d405e7e9d34cb455ff1f3314539fbb9e69ba72aff5a4af8b0973f56679ea5
+        x-checker-data:
+          type: html
+          url: https://www.profex-xrd.org/download/linux-2/
+          pattern: (https://www.profex-xrd.org/.+/BGMN-Templates-([\d\.]+\d)-MacLinux.tar.gz)
 
   - name: profex
     buildsystem: qmake
@@ -76,8 +84,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2023/09/profex-5.2.3.tar.gz
-        sha256: b7e72529a1384f3b341f0258d28e229a8c0e3fa98921ef7f4c93c4ea53c62312
+        url: https://www.profex-xrd.org/wp-content/uploads/2023/10/profex-5.2.4.tar.gz
+        sha256: 39ed484422245aa25c3ff5f51d8352ddf3d69362de947d140060f36e5e3bec63
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
@@ -86,6 +94,8 @@ modules:
         path: bgmnbackendconfig.patch
       - type: patch
         path: appdata.patch
+      - type: patch
+        path: profexpro.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
