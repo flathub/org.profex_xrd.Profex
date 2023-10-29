@@ -76,8 +76,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2023/09/profex-5.2.3.tar.gz
-        sha256: b7e72529a1384f3b341f0258d28e229a8c0e3fa98921ef7f4c93c4ea53c62312
+        url: https://www.profex-xrd.org/wp-content/uploads/2023/10/profex-5.2.4.tar.gz
+        sha256: 71aa8e65ef98432d2c192c9364dbece482bb9c523662657ca3769ca6ce64ca98
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
