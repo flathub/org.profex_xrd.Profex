@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..18de10d 100644
+index 87f7c34..a9322d2 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,9 @@
@@ -14,7 +14,7 @@ index 87f7c34..18de10d 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,60 +54,146 @@
+@@ -53,60 +54,162 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -69,6 +69,22 @@ index 87f7c34..18de10d 100644
 -      </ul>
 -    </description>
 -  </release>
++    <release version="5.2.5" date="2023-12-29">
++      <description>
++        <p>Bugfix and minor feature release</p>
++        <ul>
++          <li>New manual base line in tools - add baseline</li>
++          <li>Save peak list filters in presets</li>
++          <li>Apply peak list filters to other projects</li>
++          <li>List *.xye files in ASCII import filter</li>
++          <li>Copy instrument sav and tpl files when applying control files to other projects</li>
++          <li>Fixed tab order in some instrument dialog pages</li>
++          <li>New import filter for Thermo Fisher TXL file format</li>
++          <li>Improved recognition of typos in syntax highlighter</li>
++          <li>Fixed phase names imported from COD files that only contain numeric values</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.2.4" date="2023-10-26">
 +      <description>
 +        <p>Bugfix and minor feature release</p>
@@ -213,7 +229,7 @@ index 87f7c34..18de10d 100644
          <ul>
            <li>Select scans by holding Shift and clicking on the graph</li>
            <li>Fixed selection of scans during running refinements</li>
-@@ -122,7 +209,7 @@
+@@ -122,7 +225,7 @@
      </release>
      <release version="5.0.1" date="2022-03-13">
        <description>
