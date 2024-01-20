@@ -1,0 +1,10 @@
+diff --git a/profex5.desktop b/profex5.desktop
+index 22d7eb2..cda64cb 100644
+--- a/profex5.desktop
++++ b/profex5.desktop
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Version=5.1.0
+ Type=Application
+ 
+ Exec=profex
