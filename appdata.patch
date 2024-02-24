@@ -1,8 +1,8 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..83a0835 100644
+index 87f7c34..a564697 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
-@@ -6,8 +6,9 @@
+@@ -6,8 +6,10 @@
    <name>Profex</name>
    <developer_name>Nicola Döbelin</developer_name>
    <url type="homepage">https://www.profex-xrd.org/</url>
@@ -11,10 +11,11 @@ index 87f7c34..83a0835 100644
 +  <url type="faq">https://www.profex-xrd.org/faq/</url>
 +  <url type="help">https://www.profex-xrd.org/tutorials/</url>
 +  <url type="contact">https://www.profex-xrd.org/contact/</url>
++  <launchable type="desktop-id">profex5.desktop</launchable>
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,60 +54,182 @@
+@@ -53,60 +55,191 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -69,6 +70,15 @@ index 87f7c34..83a0835 100644
 -      </ul>
 -    </description>
 -  </release>
++    <release version="5.2.7" date="2024-02-19">
++      <description>
++        <p>Bugfix release</p>
++        <ul>
++          <li>Fixed random crashes on Mac M2 platform (and maybe others)</li>
++          <li>Fixed crash when closing projects while the last tab with a text file is shown</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.2.6" date="2024-02-10">
 +      <description>
 +        <p>Bugfix and minor feature release</p>
@@ -249,7 +259,7 @@ index 87f7c34..83a0835 100644
          <ul>
            <li>Select scans by holding Shift and clicking on the graph</li>
            <li>Fixed selection of scans during running refinements</li>
-@@ -122,7 +245,7 @@
+@@ -122,7 +255,7 @@
      </release>
      <release version="5.0.1" date="2022-03-13">
        <description>
