@@ -1,6 +1,6 @@
 app-id: org.profex_xrd.Profex
 runtime: org.kde.Platform
-runtime-version: '6.5'
+runtime-version: '6.6'
 sdk: org.kde.Sdk
 command: profex
 rename-icon: profex5
@@ -29,13 +29,13 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qt5compat-everywhere-src-6.5.3.tar.xz
-        sha256: eeb2a9e27771e15aaa7935f61a8024b46cc8e2044ae0ceacff2754c0cb806464
+        url: https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qt5compat-everywhere-src-6.6.3.tar.xz
+        sha256: 68c2cf4e5eabfea27626fe40d088cb0dbb2c0414d3961ef132b7e06c60ceec0b
         x-checker-data:
           type: html
-          url: https://download.qt.io/official_releases/qt/6.5/
+          url: https://download.qt.io/official_releases/qt/6.6/
           version-pattern: '>([\d\.-]*)/<'
-          url-template: https://download.qt.io/official_releases/qt/6.5/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
+          url-template: https://download.qt.io/official_releases/qt/6.6/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
     post-install:
       - mv /app/mkspecs /app/lib
       - ln -sr ${FLATPAK_DEST}/lib/${FLATPAK_ARCH}-linux-gnu/libQt*.so* -t ${FLATPAK_DEST}/lib/
@@ -84,8 +84,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2024/02/profex-5.2.7.tar.gz
-        sha256: bfb6ba22fd922c9eb96773923ba5205163e2d115da7f81420949398acafe0444
+        url: https://www.profex-xrd.org/wp-content/uploads/2024/03/profex-5.2.8.tar.gz
+        sha256: 9e7b0fb4db882d786f802405c13fdfcf14690eb01bfd746f64c5c33745e23924
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
