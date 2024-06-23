@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..8763b21 100644
+index 87f7c34..eed9b46 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,7 @@ index 87f7c34..8763b21 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,60 +55,219 @@
+@@ -53,60 +55,251 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -70,6 +70,38 @@ index 87f7c34..8763b21 100644
 -      </ul>
 -    </description>
 -  </release>
++    <release version="5.3.0" date="2024-06-22">
++      <description>
++        <p>Feature and bug fix release</p>
++        <ul>
++          <li>New mouse context menu actions to refine or fix all fractional coordinates</li>
++          <li>New module in Tools menu to convert divercence slit intensities</li>
++          <li>Remember default instrument when creating a new refinement project</li>
++          <li>Improved messages when refinements are aborted or crashed</li>
++          <li>Electron density map module: Fixed automatic scaling of intensity</li>
++          <li>Electron density map module: Added unit to scale</li>
++          <li>Electron density map module: Fixed transparent background when rendering contour lines</li>
++          <li>Show 'complete' graph status after search-match completes</li>
++          <li>Fixed crash upon program exit when a pixmap was copied to the clipboard</li>
++          <li>Ctrl+C can now be used on various dock windows (plot options, peak list) to copy data to the clipboard</li>
++          <li>Optimized colors in dark mode</li>
++          <li>New module in Tools menu to calculate bond lengths</li>
++          <li>Fixed drawing of active scans below the background curve (e.g. curves from peak fitting module)</li>
++          <li>Do not pre-select peak list filters when saving a preset and no filters are active</li>
++          <li>Fixed numbering of curves in peak fit module when curves were deleted prior to adding new ones</li>
++          <li>New import filter for pyFAI synchrotron datasets</li>
++          <li>Fixed bug in simulated tube tail scans generating datasets that are incompatible with BGMN</li>
++          <li>New menu Modules to reduce clutter in Tools menu</li>
++          <li>Fixed crash in CIF import</li>
++          <li>Electron Density Map, Waterfall Plot and Scan Tracer modules can use dark </li>
++          <li>Actions on scans in plot options list can now be applied to multiple selected scans</li>
++          <li>Changing color and style of scans in plot options list is now volatile (does not change the preferences) and can be applied to multiple scans at once</li>
++          <li>New smooting algorithm using discrete cosine transform (DCT) in smoothing dialog</li>
++          <li>Zlib updated</li>
++          <li>More key actions added to scan list</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.2.9" date="2024-05-11">
 +      <description>
 +        <p>Bugfix release</p>
@@ -287,7 +319,7 @@ index 87f7c34..8763b21 100644
          <ul>
            <li>Select scans by holding Shift and clicking on the graph</li>
            <li>Fixed selection of scans during running refinements</li>
-@@ -122,7 +283,7 @@
+@@ -122,7 +315,7 @@
      </release>
      <release version="5.0.1" date="2022-03-13">
        <description>
