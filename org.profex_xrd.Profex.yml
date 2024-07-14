@@ -30,7 +30,7 @@ modules:
     sources:
       - type: archive
         url: https://download.qt.io/official_releases/qt/6.7/6.7.2/submodules/qt5compat-everywhere-src-6.7.2.tar.xz
-        sha256: f068019cf0d02f5cd2907bb6be1667c919e908cac3ff59b9f38cee2a81edef2e
+        sha256: 8826b5189efc4d9bdb64fdb1aa89d0fdf4e53c60948ed7995621ed046e38c003
         x-checker-data:
           type: html
           url: https://download.qt.io/official_releases/qt/6.7/
