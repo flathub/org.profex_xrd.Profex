@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..eed9b46 100644
+index 87f7c34..1794943 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,7 @@ index 87f7c34..eed9b46 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,60 +55,251 @@
+@@ -53,60 +55,261 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -70,6 +70,16 @@ index 87f7c34..eed9b46 100644
 -      </ul>
 -    </description>
 -  </release>
++    <release version="5.3.1" date="2024-08-31">
++      <description>
++        <p>Bug fix release</p>
++        <ul>
++          <li>Fixed crash with Rigaku RAS files containing empty comment fields</li>
++          <li>Fixed multi-scan DIA import</li>
++          <li>GUI improvements in "format results" and "process dia files" tools</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.3.0" date="2024-06-22">
 +      <description>
 +        <p>Feature and bug fix release</p>
@@ -319,7 +329,7 @@ index 87f7c34..eed9b46 100644
          <ul>
            <li>Select scans by holding Shift and clicking on the graph</li>
            <li>Fixed selection of scans during running refinements</li>
-@@ -122,7 +315,7 @@
+@@ -122,7 +325,7 @@
      </release>
      <release version="5.0.1" date="2022-03-13">
        <description>
