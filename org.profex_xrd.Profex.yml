@@ -96,6 +96,8 @@ modules:
         path: appdata.patch
       - type: patch
         path: desktop.patch
+      - type: patch
+        path: version.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
