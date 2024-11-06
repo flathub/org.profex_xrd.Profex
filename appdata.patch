@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..4d3c260 100644
+index 87f7c34..36f4678 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -74,7 +74,7 @@ index 87f7c34..4d3c260 100644
 +      <description>
 +        <p>Bug fixes</p>
 +        <ul>
-+          <li>Report infinite crystallite size as "n.a." instead of "ERROR" in the refinement results table</li>
++          <li>Report infinite crystallite size as „n.a.“ instead of „ERROR“ in the refinement results table</li>
 +          <li>Use same precision for refinement results in refinement results table as in LST file</li>
 +          <li>Fixed opening text files with spaces in file name from mouse context menu in control file editor</li>
 +          <li>Fixed wrong intensity cursor coordinates on difference curve in sqrt and log10 scale</li>
@@ -84,11 +84,11 @@ index 87f7c34..4d3c260 100644
 +        <p>New features</p>
 +        <ul>
 +          <li>Allow arbitrary background colors for graphs rather than predefined gray levels</li>
-+          <li>Show tick marks and labels on the difference curve (labels are deactivated by default, can be activated in Edit - Preferences - Graphs - Axes and Lines - Show tick labels on difference curve)</li>
++          <li>Show tick marks and labels on the difference curve (labels are deactivated by default, can be activated in Edit -> Preferences -> Graphs -> Axes and Lines -> Show tick labels on difference curve)</li>
 +          <li>Matching phases in search-match window can be sorted</li>
-+          <li>STR file of selected phase in search-match window is shown in a new editor (behind "pinned phases")</li>
-+          <li>New context menu action "refine / fix all TDS" in STR file editor</li>
-+          <li>Unneeded statistics results can be hidden from refinement results table (Edit - Preferences - BGMN - Summary Tables)</li>
++          <li>STR file of selected phase in search-match window is shown in a new editor (behind „pinned phases“)</li>
++          <li>New context menu action „refine / fix all TDS“ in STR file editor</li>
++          <li>Unneeded statistics results can be hidden from refinement results table (Edit -> Preferences -> BGMN -> Summary Tables)</li>
 +          <li>New context help text for control file editors</li>
 +        </ul>
 +        <p>Known issues</p>
@@ -97,8 +97,8 @@ index 87f7c34..4d3c260 100644
 +          <li>Workaround: Change the color in an SVG editor.</li>
 +          <li>GOALs listed in the refinement summary can be missing.</li>
 +          <li>Fix: Reset the listed GOALs in the preferences:</li>
-+          <li>Edit - Preferences - BGMN - Summary Tables - Global Parameters and GOALs - Listed GOALs (click Reset button).</li>
-+          <li>Edit - Preferences - BGMN - Summary Tables - Local Parameters and GOALs - Listed GOALs (click Reset button).</li>
++          <li>Edit -> Preferences -> BGMN -> Summary Tables -> Global Parameters and GOALs -> Listed GOALs (click Reset button).</li>
++          <li>Edit -> Preferences -> BGMN -> Summary Tables -> Local Parameters and GOALs -> Listed GOALs (click Reset button).</li>
 +        </ul>
 +      </description>
 +    </release>
@@ -192,7 +192,7 @@ index 87f7c34..4d3c260 100644
 +          <li>Fixed linear background drawing in peak integrals with sqrt or log10 y-axis scaling</li>
 +          <li>Draw the active region of peak fits</li>
 +          <li>Added refinement toggling for B2 parameter</li>
-+          <li>Disabled "reset file" for BGMN projects</li>
++          <li>Disabled „reset file“ for BGMN projects</li>
 +          <li>Increase file name when adding more than one amorphous peak</li>
 +          <li>New import filter for CHI files</li>
 +          <li>Fixed bug in search-match module refusing to run with synchrotron radiation</li>
@@ -328,7 +328,7 @@ index 87f7c34..4d3c260 100644
 +          <li>Added support for divergenceCorrection data in xrdml files</li>
 +          <li>Export of electron density map raw data</li>
 +          <li>Fixed drawing issues in electron density map dialog</li>
-+          <li>Moved favorites selection from preferences dialog to tools - browse reference structures</li>
++          <li>Moved favorites selection from preferences dialog to tools -> browse reference structures</li>
 +          <li>Tool tips added in various dialogs</li>
 +          <li>New selection box to specify the reference structure repository</li>
 +          <li>Better error handling if creating projects goes wrong</li>
