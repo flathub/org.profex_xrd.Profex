@@ -1,0 +1,11 @@
+diff --git a/version.pri b/version.pri
+index 201c697..1dfb2ca 100644
+--- a/version.pri
++++ b/version.pri
+@@ -1,4 +1,4 @@
+ VERSION_MAJOR = 5
+-VERSION_MINOR = 3
+-VERSION_BUILD = 2
++VERSION_MINOR = 4
++VERSION_BUILD = 0
+ 

@@ -84,8 +84,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2024/08/profex-5.3.1.tar.gz
-        sha256: ca1db3962bf828c0d9d8f9f6adbe9ef8c5d003f80b69f72d0878f6f752753cbc
+        url: https://www.profex-xrd.org/wp-content/uploads/2024/10/profex-5.4.0.tar.gz
+        sha256: 057e5c128bc352e039b4320d013d36ee0b9d1d584189bca0e7b43b825149e54d
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
@@ -96,6 +96,8 @@ modules:
         path: appdata.patch
       - type: patch
         path: desktop.patch
+      - type: patch
+        path: version.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
