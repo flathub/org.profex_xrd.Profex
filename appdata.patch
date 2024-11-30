@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..36f4678 100644
+index 87f7c34..062fb25 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,7 @@ index 87f7c34..36f4678 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,60 +55,293 @@
+@@ -53,60 +55,304 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -70,6 +70,17 @@ index 87f7c34..36f4678 100644
 -      </ul>
 -    </description>
 -  </release>
++    <release version="5.4.1" date="2024-11-24">
++      <description>
++        <p>Bug fixes</p>
++        <ul>
++          <li>xye file import filter now reads values in scientific notation</li>
++          <li>Fixed regression not reading settings from previous versions for local and global goals in summary table</li>
++          <li>Report parameter values UNDEF and ERROR as n.a. in summary table</li>
++          <li>Fixed parsing error in pyFail import filter</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.4.0" date="2024-10-13">
 +      <description>
 +        <p>Bug fixes</p>
@@ -361,7 +372,7 @@ index 87f7c34..36f4678 100644
          <ul>
            <li>Select scans by holding Shift and clicking on the graph</li>
            <li>Fixed selection of scans during running refinements</li>
-@@ -122,7 +357,7 @@
+@@ -122,7 +368,7 @@
      </release>
      <release version="5.0.1" date="2022-03-13">
        <description>
@@ -370,3 +381,72 @@ index 87f7c34..36f4678 100644
          <ul>
            <li>Removed option to customize quantity goal nomenclature in preferences</li>
            <li>Automatically run verification when opening CIF files in the structure import dialog</li>
+@@ -145,68 +391,6 @@
+         </ul>
+       </description>
+     </release>
+-    <release version="5.0.0" date="2022-01-29">
+-      <description>
+-        <p>Major feature upgrade</p>
+-        <ul>
+-          <li>Port to Apple Silicon ARM64 platform</li>
+-          <li>Port to Qt 6.2</li>
+-          <li>Indexing and hkl buffer code rewritten</li>
+-          <li>Speed improvements in project loading and preferences</li>
+-          <li>Enable / disable menu actions depending on graph / text widgets</li>
+-          <li>New default text block and text block handling</li>
+-          <li>Better scan highlighting in waterfall plot dialog</li>
+-          <li>New indexing progress dialog with skip button added</li>
+-          <li>Implementation of context help changed to capture interpreter functions</li>
+-          <li>Sequential refinements</li>
+-          <li>Sorting actions for project tree widget items added</li>
+-          <li>Don't clear search-match results list when running a regular refinement</li>
+-          <li>Changed range limits of peak fit widget</li>
+-          <li>Fixed batch refinement script code</li>
+-          <li>Added more comment signs to ascii import filter</li>
+-          <li>Added verbose level to preferences and debug output</li>
+-          <li>Show full file path as tool tip in search-match results list</li>
+-          <li>Handling of tube tail files fixed, are now also added to project backups</li>
+-          <li>Don't process VAL files natively on non-windows platforms</li>
+-          <li>Fix resetting of wavelength in graphwindow when changing preferences</li>
+-          <li>Configuration option for number of double click matches</li>
+-          <li>Fix encoding of file names with umlauts on windows</li>
+-          <li>Fix text encoding when reading and writing text files</li>
+-          <li>Optimized dia polling intervals</li>
+-          <li>Set number of strongest peak for double clicking</li>
+-          <li>Major rewrite of instrument dialog</li>
+-          <li>Context help for editinstrumentdialog</li>
+-          <li>New menu to toggle base of hkl lines quickly</li>
+-          <li>Show hkl reference lines on difference curve</li>
+-          <li>Show best matching reference structures in search-match results</li>
+-          <li>RU added to search-match controls</li>
+-          <li>Context menu for increasing and decreasing refinement values</li>
+-          <li>Add B1, k2, k1 when toggling RP parameter</li>
+-          <li>Handling of T and D in reflexion geometry in instrument config dialog</li>
+-          <li>Improved new dia file poller</li>
+-          <li>Fixed instrument editor for fixed or variable slits</li>
+-          <li>Don't set geometry, only resize dialogs upon init</li>
+-        </ul>
+-      </description>
+-    </release>
+-    <release version="4.3.6" date="2021-12-17">
+-      <description>
+-        <p>Minor feature release</p>
+-        <ul>
+-          <li>Number of double-click matches can be configured in the preferences</li>
+-          <li>Number of strongest peaks used for double-click phase identification can be configured in the preferences</li>
+-          <li>Fix hkl line scaling with mouse wheel when starting below zero line</li>
+-          <li>Option to show hkl reference lines on difference curve</li>
+-          <li>Show best matching reference structures in search-match results</li>
+-          <li>Context menu and automatic handling of k1, k2, B1 in text editors</li>
+-          <li>Fixed handling of T and D in reflexion geometry in instrument configuration dialog</li>
+-          <li>Fixed crash in peak detection</li>
+-          <li>New implementation of structure file indexing</li>
+-          <li>Do not save the position of dialogs to avoid issues when disconnecting external screens</li>
+-          <li>Option to index full pattern was removed</li>
+-        </ul>
+-      </description>
+-    </release>
+   </releases>
+   <categories>
+     <category>Science</category>
