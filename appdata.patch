@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..aacbaa9 100644
+index 87f7c34..8f33475 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,7 @@ index 87f7c34..aacbaa9 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,157 +55,325 @@
+@@ -53,157 +55,262 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -71,7 +71,8 @@ index 87f7c34..aacbaa9 100644
 -    </description>
 -  </release>
 -    <release version="5.0.2" date="2022-05-21">
--      <description>
++    <release version="5.5.1" date="2025-07-06">
+       <description>
 -      <p>Minor feature upgrade</p>
 -        <ul>
 -          <li>Select scans by holding Shift and clicking on the graph</li>
@@ -83,11 +84,17 @@ index 87f7c34..aacbaa9 100644
 -          <li>Don't ask for instrument / wavelength when peak searching on an existing project</li>
 -          <li>Fixed certain wavelengths not being assigned to characteristic spectra correctly</li>
 -          <li>Preserve the scale factor of hkl reference lines when selecting a new reference structure</li>
--        </ul>
--      </description>
--    </release>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Fixed a crash when closing all projects, then opening one, while a tools dialog is open</li>
++          <li>Tool tips were added to the preferences dialog</li>
++          <li>Code optimization in preferences dialog</li>
+         </ul>
+       </description>
+     </release>
 -    <release version="5.0.1" date="2022-03-13">
--      <description>
++    <release version="5.5.0" date="2025-05-17">
+       <description>
 -      <p>Major feature upgrade</p>
 -        <ul>
 -          <li>Removed option to customize quantity goal nomenclature in preferences</li>
@@ -108,12 +115,6 @@ index 87f7c34..aacbaa9 100644
 -          <li>Sorting of projects, scans, and waterfall scans by drag-and-drop</li>
 -          <li>Waterfall plot accepts drop events</li>
 -          <li>Fixed various drawing issues in waterfall plot dialog</li>
--        </ul>
--      </description>
--    </release>
--    <release version="5.0.0" date="2022-01-29">
-+    <release version="5.5.0" date="2025-05-17">
-+      <description>
 +        <p>New features</p>
 +        <ul>
 +          <li>New module „synchrotron configurator“ to create synchrotron image plate instrument configurations</li>
@@ -136,22 +137,76 @@ index 87f7c34..aacbaa9 100644
 +          <li>Multi-treaded curve fitting when fitting multiple regions</li>
 +          <li>Double-click on peak fit range label zooms to range</li>
 +          <li>Removed center line from peak fit ranges</li>
-+        </ul>
-+      </description>
-+    </release>
+         </ul>
+       </description>
+     </release>
+-    <release version="5.0.0" date="2022-01-29">
 +    <release version="5.4.1" date="2024-11-24">
-+      <description>
+       <description>
+-        <p>Major feature upgrade</p>
+-        <ul>
+-          <li>Port to Apple Silicon ARM64 platform</li>
+-          <li>Port to Qt 6.2</li>
+-          <li>Indexing and hkl buffer code rewritten</li>
+-          <li>Speed improvements in project loading and preferences</li>
+-          <li>Enable / disable menu actions depending on graph / text widgets</li>
+-          <li>New default text block and text block handling</li>
+-          <li>Better scan highlighting in waterfall plot dialog</li>
+-          <li>New indexing progress dialog with skip button added</li>
+-          <li>Implementation of context help changed to capture interpreter functions</li>
+-          <li>Sequential refinements</li>
+-          <li>Sorting actions for project tree widget items added</li>
+-          <li>Don't clear search-match results list when running a regular refinement</li>
+-          <li>Changed range limits of peak fit widget</li>
+-          <li>Fixed batch refinement script code</li>
+-          <li>Added more comment signs to ascii import filter</li>
+-          <li>Added verbose level to preferences and debug output</li>
+-          <li>Show full file path as tool tip in search-match results list</li>
+-          <li>Handling of tube tail files fixed, are now also added to project backups</li>
+-          <li>Don't process VAL files natively on non-windows platforms</li>
+-          <li>Fix resetting of wavelength in graphwindow when changing preferences</li>
+-          <li>Configuration option for number of double click matches</li>
+-          <li>Fix encoding of file names with umlauts on windows</li>
+-          <li>Fix text encoding when reading and writing text files</li>
+-          <li>Optimized dia polling intervals</li>
+-          <li>Set number of strongest peak for double clicking</li>
+-          <li>Major rewrite of instrument dialog</li>
+-          <li>Context help for editinstrumentdialog</li>
+-          <li>New menu to toggle base of hkl lines quickly</li>
+-          <li>Show hkl reference lines on difference curve</li>
+-          <li>Show best matching reference structures in search-match results</li>
+-          <li>RU added to search-match controls</li>
+-          <li>Context menu for increasing and decreasing refinement values</li>
+-          <li>Add B1, k2, k1 when toggling RP parameter</li>
+-          <li>Handling of T and D in reflexion geometry in instrument config dialog</li>
+-          <li>Improved new dia file poller</li>
+-          <li>Fixed instrument editor for fixed or variable slits</li>
+-          <li>Don't set geometry, only resize dialogs upon init</li>
 +        <p>Bug fixes</p>
 +        <ul>
 +          <li>xye file import filter now reads values in scientific notation</li>
 +          <li>Fixed regression not reading settings from previous versions for local and global goals in summary table</li>
 +          <li>Report parameter values UNDEF and ERROR as n.a. in summary table</li>
 +          <li>Fixed parsing error in pyFail import filter</li>
-+        </ul>
-+      </description>
-+    </release>
+         </ul>
+       </description>
+     </release>
+-    <release version="4.3.6" date="2021-12-17">
 +    <release version="5.4.0" date="2024-10-13">
-+      <description>
+       <description>
+-        <p>Minor feature release</p>
+-        <ul>
+-          <li>Number of double-click matches can be configured in the preferences</li>
+-          <li>Number of strongest peaks used for double-click phase identification can be configured in the preferences</li>
+-          <li>Fix hkl line scaling with mouse wheel when starting below zero line</li>
+-          <li>Option to show hkl reference lines on difference curve</li>
+-          <li>Show best matching reference structures in search-match results</li>
+-          <li>Context menu and automatic handling of k1, k2, B1 in text editors</li>
+-          <li>Fixed handling of T and D in reflexion geometry in instrument configuration dialog</li>
+-          <li>Fixed crash in peak detection</li>
+-          <li>New implementation of structure file indexing</li>
+-          <li>Do not save the position of dialogs to avoid issues when disconnecting external screens</li>
+-          <li>Option to index full pattern was removed</li>
 +        <p>Bug fixes</p>
 +        <ul>
 +          <li>Report infinite crystallite size as „n.a.“ instead of „ERROR“ in the refinement results table</li>
@@ -358,134 +413,6 @@ index 87f7c34..aacbaa9 100644
 +          <li>minor GUI improvements</li>
 +          <li>context help text for additional modules added</li>
 +          <li>check for updates on Windows</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.2.0" date="2023-03-05">
-+      <description>
-+        <p>Feature release</p>
-+        <ul>
-+          <li>New operation qualification (OQ) wizard</li>
-+          <li>Presets are categorized in menues</li>
-+          <li>New tool to simulate tube tail measurements</li>
-+          <li>Applying presets saves control files immediately</li>
-+          <li>Fixed bug in Excel export presets</li>
-+          <li>Fixed bug in peaklist with wrong normalization of intensities</li>
-+          <li>Fixed bug in export of CIF files from LST files</li>
-+          <li>Export Uaniso to CIF files instead of beta, as recommended by the CIF dictionary</li>
-+          <li>Fixed crash when indexing structure repositories when indexing is disabled for some repositories</li>
-+          <li>Re-arranged elements for control file templates in graphical instrument editor</li>
-+          <li>Add LAMBDA when using a tube tail measurement in the instrument editor</li>
-+          <li>Fixed duplicate preset entries due to upper- and lower-case file names</li>
-+          <li>Fixed bug in ICDD XML importer when parsing hexagonal/rhombohedral space groups</li>
-+          <li>New import filter for Rigaku Smartlab XML file format</li>
-+          <li>Re-introduced toggling of phase visibility with Ctrl+0</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.1.1" date="2023-01-07">
-+      <description>
-+        <p>Bugfix release</p>
-+        <ul>
-+          <li>Avoid duplication of instruments when opening the add/remove phases dialog multiple times</li>
-+          <li>Do not list text blocks multiple times when opening the preferences multiple times</li>
-+          <li>Fixed several bugs in CIF import</li>
-+          <li>New export filter for ASCII text format</li>
-+          <li>Fixed bug in UDF import filter</li>
-+          <li>Fixed bugs in export of waterfall plots</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.1.0" date="2022-10-08">
-       <description>
-         <p>Major feature upgrade</p>
-         <ul>
--          <li>Port to Apple Silicon ARM64 platform</li>
--          <li>Port to Qt 6.2</li>
--          <li>Indexing and hkl buffer code rewritten</li>
--          <li>Speed improvements in project loading and preferences</li>
--          <li>Enable / disable menu actions depending on graph / text widgets</li>
--          <li>New default text block and text block handling</li>
--          <li>Better scan highlighting in waterfall plot dialog</li>
--          <li>New indexing progress dialog with skip button added</li>
--          <li>Implementation of context help changed to capture interpreter functions</li>
--          <li>Sequential refinements</li>
--          <li>Sorting actions for project tree widget items added</li>
--          <li>Don't clear search-match results list when running a regular refinement</li>
--          <li>Changed range limits of peak fit widget</li>
--          <li>Fixed batch refinement script code</li>
--          <li>Added more comment signs to ascii import filter</li>
--          <li>Added verbose level to preferences and debug output</li>
--          <li>Show full file path as tool tip in search-match results list</li>
--          <li>Handling of tube tail files fixed, are now also added to project backups</li>
--          <li>Don't process VAL files natively on non-windows platforms</li>
--          <li>Fix resetting of wavelength in graphwindow when changing preferences</li>
--          <li>Configuration option for number of double click matches</li>
--          <li>Fix encoding of file names with umlauts on windows</li>
--          <li>Fix text encoding when reading and writing text files</li>
--          <li>Optimized dia polling intervals</li>
--          <li>Set number of strongest peak for double clicking</li>
--          <li>Major rewrite of instrument dialog</li>
--          <li>Context help for editinstrumentdialog</li>
--          <li>New menu to toggle base of hkl lines quickly</li>
--          <li>Show hkl reference lines on difference curve</li>
--          <li>Show best matching reference structures in search-match results</li>
--          <li>RU added to search-match controls</li>
--          <li>Context menu for increasing and decreasing refinement values</li>
--          <li>Add B1, k2, k1 when toggling RP parameter</li>
--          <li>Handling of T and D in reflexion geometry in instrument config dialog</li>
--          <li>Improved new dia file poller</li>
--          <li>Fixed instrument editor for fixed or variable slits</li>
--          <li>Don't set geometry, only resize dialogs upon init</li>
--        </ul>
--      </description>
--    </release>
--    <release version="4.3.6" date="2021-12-17">
--      <description>
--        <p>Minor feature release</p>
--        <ul>
--          <li>Number of double-click matches can be configured in the preferences</li>
--          <li>Number of strongest peaks used for double-click phase identification can be configured in the preferences</li>
--          <li>Fix hkl line scaling with mouse wheel when starting below zero line</li>
--          <li>Option to show hkl reference lines on difference curve</li>
--          <li>Show best matching reference structures in search-match results</li>
--          <li>Context menu and automatic handling of k1, k2, B1 in text editors</li>
--          <li>Fixed handling of T and D in reflexion geometry in instrument configuration dialog</li>
--          <li>Fixed crash in peak detection</li>
--          <li>New implementation of structure file indexing</li>
--          <li>Do not save the position of dialogs to avoid issues when disconnecting external screens</li>
--          <li>Option to index full pattern was removed</li>
-+          <li>Allow editing of source files in the structure import dialog</li>
-+          <li>Fixed an error in CIF import if several sites use the same _atom_site_label</li>
-+          <li>Fixed wrong handling of sample height displacement in peak integral module</li>
-+          <li>Context help in various modules</li>
-+          <li>Multi-range curve fitting</li>
-+          <li>Added support for divergenceCorrection data in xrdml files</li>
-+          <li>Export of electron density map raw data</li>
-+          <li>Fixed drawing issues in electron density map dialog</li>
-+          <li>Moved favorites selection from preferences dialog to tools -> browse reference structures</li>
-+          <li>Tool tips added in various dialogs</li>
-+          <li>New selection box to specify the reference structure repository</li>
-+          <li>Better error handling if creating projects goes wrong</li>
-+          <li>Double-click on status bar opens dialogs</li>
-+          <li>Option to show the wavelength in the x-axis label</li>
-+          <li>Option to open STR files after adding new phases</li>
-+          <li>Fixed crash when activating the inspector cursor</li>
-+          <li>Fix chemistry table to work with internal standard quantifications</li>
-+          <li>Improved CIF import to work with SPF SpringerMaterials ISP files</li>
-+          <li>Fixed parsing error for Bruker raw V4 and Rigaku RasX files</li>
-+          <li>More Dectris detectors added to the detector configuration page in the instrument editor</li>
-+          <li>Fixed wrong scaling and blurry fonts on high-DPI displays</li>
-+          <li>Show-legend action removed from the context menu (use the View menu instead)</li>
-+          <li>Fixed bugs in exported SVG files</li>
-+          <li>Added Q scale for x-axis</li>
-+          <li>Dynamically adjust significant digits in axis labels according to zoom level</li>
-+          <li>Open STR file of active scan from graph using Ctrl+T</li>
-+          <li>Open STR files under cursor in SAV or LST file using Ctrl+T</li>
-+          <li>Jump to phase in LST file when selecting a graph in the plot options list</li>
-+          <li>Toggle LeBail mode with F5/F6 key</li>
-+          <li>Show scan name as tool tip when hovering the mouse over a scan</li>
-+          <li>Option to draw a highlight rectangle behind the hkl lines of the active scan</li>
          </ul>
        </description>
      </release>
