@@ -29,8 +29,8 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://download.qt.io/official_releases/qt/6.9/6.9.1/submodules/qt5compat-everywhere-src-6.9.1.tar.xz
-        sha256: 96c726ac3f0d5c40570e75196e4ab5c95d3de7c85d15604fe97ac2a6573d917a
+        url: https://download.qt.io/official_releases/qt/6.9/6.9.2/submodules/qt5compat-everywhere-src-6.9.2.tar.xz
+        sha256: cb289905c689fc271ce783f8b67844040aa73d78f4f0cf8421fa713390a75b60
         x-checker-data:
           type: html
           url: https://download.qt.io/official_releases/qt/6.9/
@@ -84,8 +84,8 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2025/07/profex-5.5.1.tar.gz
-        sha256: b913f4a325bfac8f708806d9adb76f48fb5e77484d6eae7a6a98ca9648c45152
+        url: https://www.profex-xrd.org/wp-content/uploads/2025/08/profex-5.5.2.tar.gz
+        sha256: ee66b37b86654dd521f2ec1484b6f0567968a0b1f1fee356f9a6cbb021c7cd56
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
