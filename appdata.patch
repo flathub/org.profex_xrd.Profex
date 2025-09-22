@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..8f33475 100644
+index 87f7c34..d68b6d6 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,7 @@ index 87f7c34..8f33475 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,157 +55,262 @@
+@@ -53,157 +55,270 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -71,8 +71,7 @@ index 87f7c34..8f33475 100644
 -    </description>
 -  </release>
 -    <release version="5.0.2" date="2022-05-21">
-+    <release version="5.5.1" date="2025-07-06">
-       <description>
+-      <description>
 -      <p>Minor feature upgrade</p>
 -        <ul>
 -          <li>Select scans by holding Shift and clicking on the graph</li>
@@ -84,17 +83,11 @@ index 87f7c34..8f33475 100644
 -          <li>Don't ask for instrument / wavelength when peak searching on an existing project</li>
 -          <li>Fixed certain wavelengths not being assigned to characteristic spectra correctly</li>
 -          <li>Preserve the scale factor of hkl reference lines when selecting a new reference structure</li>
-+        <p>Bug fixes</p>
-+        <ul>
-+          <li>Fixed a crash when closing all projects, then opening one, while a tools dialog is open</li>
-+          <li>Tool tips were added to the preferences dialog</li>
-+          <li>Code optimization in preferences dialog</li>
-         </ul>
-       </description>
-     </release>
+-        </ul>
+-      </description>
+-    </release>
 -    <release version="5.0.1" date="2022-03-13">
-+    <release version="5.5.0" date="2025-05-17">
-       <description>
+-      <description>
 -      <p>Major feature upgrade</p>
 -        <ul>
 -          <li>Removed option to customize quantity goal nomenclature in preferences</li>
@@ -115,34 +108,11 @@ index 87f7c34..8f33475 100644
 -          <li>Sorting of projects, scans, and waterfall scans by drag-and-drop</li>
 -          <li>Waterfall plot accepts drop events</li>
 -          <li>Fixed various drawing issues in waterfall plot dialog</li>
-+        <p>New features</p>
-+        <ul>
-+          <li>New module „synchrotron configurator“ to create synchrotron image plate instrument configurations</li>
-+          <li>Major overhaul of „File -> Import structure files“ dialog to improve usability</li>
-+          <li>New checkbox in module „electron density maps“ to toggle between automatic and manual scaling</li>
-+          <li>New context menu action to renumber parameters in SAV files</li>
-+          <li>New functions and better organization of context menu for STR files</li>
-+          <li>New shortcuts CTRL+n (n = 1…9) to raise tabs 1 – 9</li>
-+          <li>New shortcut CTRL+0 to reset text zoom</li>
-+          <li>Automatic peak detection added to peak fitting module</li>
-+        </ul>
-+        <p>Bug fixes</p>
-+        <ul>
-+          <li>Abort button in curve fitting module works now</li>
-+          <li>AlgLib updated to 4.04.0</li>
-+          <li>Fixed bug when parsing DIA files with multiple scans</li>
-+          <li>Updated context help text</li>
-+          <li>New function „batch curve fitting“</li>
-+          <li>New style for peak fit ranges</li>
-+          <li>Multi-treaded curve fitting when fitting multiple regions</li>
-+          <li>Double-click on peak fit range label zooms to range</li>
-+          <li>Removed center line from peak fit ranges</li>
-         </ul>
-       </description>
-     </release>
+-        </ul>
+-      </description>
+-    </release>
 -    <release version="5.0.0" date="2022-01-29">
-+    <release version="5.4.1" date="2024-11-24">
-       <description>
+-      <description>
 -        <p>Major feature upgrade</p>
 -        <ul>
 -          <li>Port to Apple Silicon ARM64 platform</li>
@@ -182,18 +152,11 @@ index 87f7c34..8f33475 100644
 -          <li>Improved new dia file poller</li>
 -          <li>Fixed instrument editor for fixed or variable slits</li>
 -          <li>Don't set geometry, only resize dialogs upon init</li>
-+        <p>Bug fixes</p>
-+        <ul>
-+          <li>xye file import filter now reads values in scientific notation</li>
-+          <li>Fixed regression not reading settings from previous versions for local and global goals in summary table</li>
-+          <li>Report parameter values UNDEF and ERROR as n.a. in summary table</li>
-+          <li>Fixed parsing error in pyFail import filter</li>
-         </ul>
-       </description>
-     </release>
+-        </ul>
+-      </description>
+-    </release>
 -    <release version="4.3.6" date="2021-12-17">
-+    <release version="5.4.0" date="2024-10-13">
-       <description>
+-      <description>
 -        <p>Minor feature release</p>
 -        <ul>
 -          <li>Number of double-click matches can be configured in the preferences</li>
@@ -207,6 +170,64 @@ index 87f7c34..8f33475 100644
 -          <li>New implementation of structure file indexing</li>
 -          <li>Do not save the position of dialogs to avoid issues when disconnecting external screens</li>
 -          <li>Option to index full pattern was removed</li>
++    <release version="5.5.2" date="2025-08-17">
++      <description>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Refined scans are displayed correctly on systems using a comma decimal separator (e.g. 1,234)</li>
++        </ul>
++      </description>
++    </release>
++    <release version="5.5.1" date="2025-07-06">
++      <description>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Fixed a crash when closing all projects, then opening one, while a tools dialog is open</li>
++          <li>Tool tips were added to the preferences dialog</li>
++          <li>Code optimization in preferences dialog</li>
++        </ul>
++      </description>
++    </release>
++    <release version="5.5.0" date="2025-05-17">
++      <description>
++        <p>New features</p>
++        <ul>
++          <li>New module „synchrotron configurator“ to create synchrotron image plate instrument configurations</li>
++          <li>Major overhaul of „File -> Import structure files“ dialog to improve usability</li>
++          <li>New checkbox in module „electron density maps“ to toggle between automatic and manual scaling</li>
++          <li>New context menu action to renumber parameters in SAV files</li>
++          <li>New functions and better organization of context menu for STR files</li>
++          <li>New shortcuts CTRL+n (n = 1…9) to raise tabs 1 – 9</li>
++          <li>New shortcut CTRL+0 to reset text zoom</li>
++          <li>Automatic peak detection added to peak fitting module</li>
++        </ul>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Abort button in curve fitting module works now</li>
++          <li>AlgLib updated to 4.04.0</li>
++          <li>Fixed bug when parsing DIA files with multiple scans</li>
++          <li>Updated context help text</li>
++          <li>New function „batch curve fitting“</li>
++          <li>New style for peak fit ranges</li>
++          <li>Multi-treaded curve fitting when fitting multiple regions</li>
++          <li>Double-click on peak fit range label zooms to range</li>
++          <li>Removed center line from peak fit ranges</li>
++        </ul>
++      </description>
++    </release>
++    <release version="5.4.1" date="2024-11-24">
++      <description>
++        <p>Bug fixes</p>
++        <ul>
++          <li>xye file import filter now reads values in scientific notation</li>
++          <li>Fixed regression not reading settings from previous versions for local and global goals in summary table</li>
++          <li>Report parameter values UNDEF and ERROR as n.a. in summary table</li>
++          <li>Fixed parsing error in pyFail import filter</li>
++        </ul>
++      </description>
++    </release>
++    <release version="5.4.0" date="2024-10-13">
++      <description>
 +        <p>Bug fixes</p>
 +        <ul>
 +          <li>Report infinite crystallite size as „n.a.“ instead of „ERROR“ in the refinement results table</li>
