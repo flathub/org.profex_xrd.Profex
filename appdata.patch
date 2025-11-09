@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..2db0035 100644
+index 87f7c34..6356ca7 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,7 @@ index 87f7c34..2db0035 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,157 +55,252 @@
+@@ -53,157 +55,246 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -87,23 +87,17 @@ index 87f7c34..2db0035 100644
 +        <p>New features</p>
 +        <ul>
 +          <li>Graph display:</li>
-+          <ul>
-+            <li>New option to configure the position of permanently added hkl scans (BGMN -> Reference Structures -> Appearance -> hkl Plots)</li>
-+            <li>New option in preferences (Graphs -> Appearance) to sort stacked graphs either bottom-to-top or top-to-bottom</li>
-+            <li>New option in legend context menu to invert the sorting of the legend to align with bottom-to-top stacked scans</li>
-+          </ul>
++          <li>New option to configure the position of permanently added hkl scans (BGMN -> Reference Structures -> Appearance -> hkl Plots)</li>
++          <li>New option in preferences (Graphs -> Appearance) to sort stacked graphs either bottom-to-top or top-to-bottom</li>
++          <li>New option in legend context menu to invert the sorting of the legend to align with bottom-to-top stacked scans</li>
 +          <li>Peak fitting module:</li>
-+          <ul>
-+            <li>Output standard deviations and correlation matrix of generic peak fits in output protocol</li>
-+            <li>Offer to run peak fitting again if convergence has not been reached</li>
-+            <li>More granular control over manual convergence criteria in generic peak fit module</li>
-+          </ul>
++          <li>Output standard deviations and correlation matrix of generic peak fits in output protocol</li>
++          <li>Offer to run peak fitting again if convergence has not been reached</li>
++          <li>More granular control over manual convergence criteria in generic peak fit module</li>
 +          <li>Chemistry table:</li>
-+          <ul>
-+            <li>New implementation of chemistry table makes manual selection of quantification GOALs obsolete</li>
-+            <li>Context menu in chemistry table to directly change the unit of the composition (element wt-% / element atomic-% / oxide wt-%)</li>
-+            <li>Separate configuration options for the mode of the chemistry table displayed and exported to HTML reports</li>
-+          </ul>
++          <li>New implementation of chemistry table makes manual selection of quantification GOALs obsolete</li>
++          <li>Context menu in chemistry table to directly change the unit of the composition (element wt-% / element atomic-% / oxide wt-%)</li>
++          <li>Separate configuration options for the mode of the chemistry table displayed and exported to HTML reports</li>
 +          <li>New actions to only copy x or y data of scans in plot options list</li>
 +          <li>Copy actions (ctrl + c) on many modules added</li>
 +          <li>When opening project structure files, close the same files in all other projects</li>
