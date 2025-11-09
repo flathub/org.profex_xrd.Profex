@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..d68b6d6 100644
+index 87f7c34..2db0035 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,7 @@ index 87f7c34..d68b6d6 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,157 +55,270 @@
+@@ -53,157 +55,252 @@
      </screenshot>
    </screenshots>
    <releases>
@@ -71,7 +71,8 @@ index 87f7c34..d68b6d6 100644
 -    </description>
 -  </release>
 -    <release version="5.0.2" date="2022-05-21">
--      <description>
++    <release version="5.6.0" date="2025-10-20">
+       <description>
 -      <p>Minor feature upgrade</p>
 -        <ul>
 -          <li>Select scans by holding Shift and clicking on the graph</li>
@@ -83,93 +84,40 @@ index 87f7c34..d68b6d6 100644
 -          <li>Don't ask for instrument / wavelength when peak searching on an existing project</li>
 -          <li>Fixed certain wavelengths not being assigned to characteristic spectra correctly</li>
 -          <li>Preserve the scale factor of hkl reference lines when selecting a new reference structure</li>
--        </ul>
--      </description>
--    </release>
--    <release version="5.0.1" date="2022-03-13">
--      <description>
--      <p>Major feature upgrade</p>
--        <ul>
--          <li>Removed option to customize quantity goal nomenclature in preferences</li>
--          <li>Automatically run verification when opening CIF files in the structure import dialog</li>
--          <li>Automatically run indexing when closing the structure import dialog</li>
--          <li>Improved scan-math help dialog</li>
--          <li>Better handling of settings in all dock window modules (search-match, peak fitting, peak list etc)</li>
--          <li>Disabled selection of instrument and wavelength in search-match module when runnig search-match on an existing project</li>
--          <li>Fixed calculation of Rexp in convergence progress window</li>
--          <li>Removed the menu option to hide hkl indices</li>
--          <li>Added a reload button to the peak list table</li>
--          <li>Fixed inconsistent behaviour of view -> show / hide phase patterns</li>
--          <li>Fixed phase duplication in search-match window when creating a project from pinned phases</li>
--          <li>Fixed encoding bug in import filter for binary raw data formats (also fixes issues with SVG export and refinement reports)</li>
--          <li>Displace scans also when EPSn values are hard-coded</li>
--          <li>Dixed regression with copying graphs to clipboard not working</li>
--          <li>Selection, activation, and export of multiple scans from scan list</li>
--          <li>Sorting of projects, scans, and waterfall scans by drag-and-drop</li>
--          <li>Waterfall plot accepts drop events</li>
--          <li>Fixed various drawing issues in waterfall plot dialog</li>
--        </ul>
--      </description>
--    </release>
--    <release version="5.0.0" date="2022-01-29">
--      <description>
--        <p>Major feature upgrade</p>
--        <ul>
--          <li>Port to Apple Silicon ARM64 platform</li>
--          <li>Port to Qt 6.2</li>
--          <li>Indexing and hkl buffer code rewritten</li>
--          <li>Speed improvements in project loading and preferences</li>
--          <li>Enable / disable menu actions depending on graph / text widgets</li>
--          <li>New default text block and text block handling</li>
--          <li>Better scan highlighting in waterfall plot dialog</li>
--          <li>New indexing progress dialog with skip button added</li>
--          <li>Implementation of context help changed to capture interpreter functions</li>
--          <li>Sequential refinements</li>
--          <li>Sorting actions for project tree widget items added</li>
--          <li>Don't clear search-match results list when running a regular refinement</li>
--          <li>Changed range limits of peak fit widget</li>
--          <li>Fixed batch refinement script code</li>
--          <li>Added more comment signs to ascii import filter</li>
--          <li>Added verbose level to preferences and debug output</li>
--          <li>Show full file path as tool tip in search-match results list</li>
--          <li>Handling of tube tail files fixed, are now also added to project backups</li>
--          <li>Don't process VAL files natively on non-windows platforms</li>
--          <li>Fix resetting of wavelength in graphwindow when changing preferences</li>
--          <li>Configuration option for number of double click matches</li>
--          <li>Fix encoding of file names with umlauts on windows</li>
--          <li>Fix text encoding when reading and writing text files</li>
--          <li>Optimized dia polling intervals</li>
--          <li>Set number of strongest peak for double clicking</li>
--          <li>Major rewrite of instrument dialog</li>
--          <li>Context help for editinstrumentdialog</li>
--          <li>New menu to toggle base of hkl lines quickly</li>
--          <li>Show hkl reference lines on difference curve</li>
--          <li>Show best matching reference structures in search-match results</li>
--          <li>RU added to search-match controls</li>
--          <li>Context menu for increasing and decreasing refinement values</li>
--          <li>Add B1, k2, k1 when toggling RP parameter</li>
--          <li>Handling of T and D in reflexion geometry in instrument config dialog</li>
--          <li>Improved new dia file poller</li>
--          <li>Fixed instrument editor for fixed or variable slits</li>
--          <li>Don't set geometry, only resize dialogs upon init</li>
--        </ul>
--      </description>
--    </release>
--    <release version="4.3.6" date="2021-12-17">
--      <description>
--        <p>Minor feature release</p>
--        <ul>
--          <li>Number of double-click matches can be configured in the preferences</li>
--          <li>Number of strongest peaks used for double-click phase identification can be configured in the preferences</li>
--          <li>Fix hkl line scaling with mouse wheel when starting below zero line</li>
--          <li>Option to show hkl reference lines on difference curve</li>
--          <li>Show best matching reference structures in search-match results</li>
--          <li>Context menu and automatic handling of k1, k2, B1 in text editors</li>
--          <li>Fixed handling of T and D in reflexion geometry in instrument configuration dialog</li>
--          <li>Fixed crash in peak detection</li>
--          <li>New implementation of structure file indexing</li>
--          <li>Do not save the position of dialogs to avoid issues when disconnecting external screens</li>
--          <li>Option to index full pattern was removed</li>
++        <p>New features</p>
++        <ul>
++          <li>Graph display:</li>
++          <ul>
++            <li>New option to configure the position of permanently added hkl scans (BGMN -> Reference Structures -> Appearance -> hkl Plots)</li>
++            <li>New option in preferences (Graphs -> Appearance) to sort stacked graphs either bottom-to-top or top-to-bottom</li>
++            <li>New option in legend context menu to invert the sorting of the legend to align with bottom-to-top stacked scans</li>
++          </ul>
++          <li>Peak fitting module:</li>
++          <ul>
++            <li>Output standard deviations and correlation matrix of generic peak fits in output protocol</li>
++            <li>Offer to run peak fitting again if convergence has not been reached</li>
++            <li>More granular control over manual convergence criteria in generic peak fit module</li>
++          </ul>
++          <li>Chemistry table:</li>
++          <ul>
++            <li>New implementation of chemistry table makes manual selection of quantification GOALs obsolete</li>
++            <li>Context menu in chemistry table to directly change the unit of the composition (element wt-% / element atomic-% / oxide wt-%)</li>
++            <li>Separate configuration options for the mode of the chemistry table displayed and exported to HTML reports</li>
++          </ul>
++          <li>New actions to only copy x or y data of scans in plot options list</li>
++          <li>Copy actions (ctrl + c) on many modules added</li>
++          <li>When opening project structure files, close the same files in all other projects</li>
++          <li>Save more project parameters in the backup ZIP file (scan state, curve fits, peak integrals, etc.)</li>
++        </ul>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Fixed drawing of hkl line intensities on background curve</li>
++          <li>Load *.par and *.lst files delayed to avoid incomplete loading</li>
++          <li>Don’t disable „add amorphous peak“ action on text editors</li>
++          <li>Show file extension when loading configuration files in synchrotron configurator on linux</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.5.2" date="2025-08-17">
 +      <description>
 +        <p>Bug fixes</p>
@@ -265,11 +213,32 @@ index 87f7c34..d68b6d6 100644
 +          <li>Fixed crash with Rigaku RAS files containing empty comment fields</li>
 +          <li>Fixed multi-scan DIA import</li>
 +          <li>GUI improvements in "format results" and "process dia files" tools</li>
-+        </ul>
-+      </description>
-+    </release>
+         </ul>
+       </description>
+     </release>
+-    <release version="5.0.1" date="2022-03-13">
 +    <release version="5.3.0" date="2024-06-22">
-+      <description>
+       <description>
+-      <p>Major feature upgrade</p>
+-        <ul>
+-          <li>Removed option to customize quantity goal nomenclature in preferences</li>
+-          <li>Automatically run verification when opening CIF files in the structure import dialog</li>
+-          <li>Automatically run indexing when closing the structure import dialog</li>
+-          <li>Improved scan-math help dialog</li>
+-          <li>Better handling of settings in all dock window modules (search-match, peak fitting, peak list etc)</li>
+-          <li>Disabled selection of instrument and wavelength in search-match module when runnig search-match on an existing project</li>
+-          <li>Fixed calculation of Rexp in convergence progress window</li>
+-          <li>Removed the menu option to hide hkl indices</li>
+-          <li>Added a reload button to the peak list table</li>
+-          <li>Fixed inconsistent behaviour of view -> show / hide phase patterns</li>
+-          <li>Fixed phase duplication in search-match window when creating a project from pinned phases</li>
+-          <li>Fixed encoding bug in import filter for binary raw data formats (also fixes issues with SVG export and refinement reports)</li>
+-          <li>Displace scans also when EPSn values are hard-coded</li>
+-          <li>Dixed regression with copying graphs to clipboard not working</li>
+-          <li>Selection, activation, and export of multiple scans from scan list</li>
+-          <li>Sorting of projects, scans, and waterfall scans by drag-and-drop</li>
+-          <li>Waterfall plot accepts drop events</li>
+-          <li>Fixed various drawing issues in waterfall plot dialog</li>
 +        <p>Feature and bug fix release</p>
 +        <ul>
 +          <li>New mouse context menu actions to refine or fix all fractional coordinates</li>
@@ -310,11 +279,51 @@ index 87f7c34..d68b6d6 100644
 +          <li>Fixed wrong tool tip of EPS2 spinbox in the toolbar</li>
 +          <li>Fixed a crash when importing CIF files with illegal Wyckoff symbols</li>
 +          <li>Fixed crash when opening Bruker Raw V4 files in waterfall plot module</li>
-+        </ul>
-+      </description>
-+    </release>
+         </ul>
+       </description>
+     </release>
+-    <release version="5.0.0" date="2022-01-29">
 +    <release version="5.2.8" date="2024-03-15">
-+      <description>
+       <description>
+-        <p>Major feature upgrade</p>
+-        <ul>
+-          <li>Port to Apple Silicon ARM64 platform</li>
+-          <li>Port to Qt 6.2</li>
+-          <li>Indexing and hkl buffer code rewritten</li>
+-          <li>Speed improvements in project loading and preferences</li>
+-          <li>Enable / disable menu actions depending on graph / text widgets</li>
+-          <li>New default text block and text block handling</li>
+-          <li>Better scan highlighting in waterfall plot dialog</li>
+-          <li>New indexing progress dialog with skip button added</li>
+-          <li>Implementation of context help changed to capture interpreter functions</li>
+-          <li>Sequential refinements</li>
+-          <li>Sorting actions for project tree widget items added</li>
+-          <li>Don't clear search-match results list when running a regular refinement</li>
+-          <li>Changed range limits of peak fit widget</li>
+-          <li>Fixed batch refinement script code</li>
+-          <li>Added more comment signs to ascii import filter</li>
+-          <li>Added verbose level to preferences and debug output</li>
+-          <li>Show full file path as tool tip in search-match results list</li>
+-          <li>Handling of tube tail files fixed, are now also added to project backups</li>
+-          <li>Don't process VAL files natively on non-windows platforms</li>
+-          <li>Fix resetting of wavelength in graphwindow when changing preferences</li>
+-          <li>Configuration option for number of double click matches</li>
+-          <li>Fix encoding of file names with umlauts on windows</li>
+-          <li>Fix text encoding when reading and writing text files</li>
+-          <li>Optimized dia polling intervals</li>
+-          <li>Set number of strongest peak for double clicking</li>
+-          <li>Major rewrite of instrument dialog</li>
+-          <li>Context help for editinstrumentdialog</li>
+-          <li>New menu to toggle base of hkl lines quickly</li>
+-          <li>Show hkl reference lines on difference curve</li>
+-          <li>Show best matching reference structures in search-match results</li>
+-          <li>RU added to search-match controls</li>
+-          <li>Context menu for increasing and decreasing refinement values</li>
+-          <li>Add B1, k2, k1 when toggling RP parameter</li>
+-          <li>Handling of T and D in reflexion geometry in instrument config dialog</li>
+-          <li>Improved new dia file poller</li>
+-          <li>Fixed instrument editor for fixed or variable slits</li>
+-          <li>Don't set geometry, only resize dialogs upon init</li>
 +        <p>Bugfix release</p>
 +        <ul>
 +          <li>Fixed bug when importing cubic structures from CIF files</li>
@@ -325,11 +334,25 @@ index 87f7c34..d68b6d6 100644
 +          <li>Added tool tips and reset button to search-match settings in preferences dialog</li>
 +          <li>Changed preferences implementation for not converting natively supported scan files</li>
 +          <li>Fixed crash when exporting scans to xy that only contain hkl data</li>
-+        </ul>
-+      </description>
-+    </release>
+         </ul>
+       </description>
+     </release>
+-    <release version="4.3.6" date="2021-12-17">
 +    <release version="5.2.7" date="2024-02-19">
-+      <description>
+       <description>
+-        <p>Minor feature release</p>
+-        <ul>
+-          <li>Number of double-click matches can be configured in the preferences</li>
+-          <li>Number of strongest peaks used for double-click phase identification can be configured in the preferences</li>
+-          <li>Fix hkl line scaling with mouse wheel when starting below zero line</li>
+-          <li>Option to show hkl reference lines on difference curve</li>
+-          <li>Show best matching reference structures in search-match results</li>
+-          <li>Context menu and automatic handling of k1, k2, B1 in text editors</li>
+-          <li>Fixed handling of T and D in reflexion geometry in instrument configuration dialog</li>
+-          <li>Fixed crash in peak detection</li>
+-          <li>New implementation of structure file indexing</li>
+-          <li>Do not save the position of dialogs to avoid issues when disconnecting external screens</li>
+-          <li>Option to index full pattern was removed</li>
 +        <p>Bugfix release</p>
 +        <ul>
 +          <li>Fixed random crashes on Mac M2 platform (and maybe others)</li>
@@ -380,60 +403,6 @@ index 87f7c34..d68b6d6 100644
 +          <li>Fixed icons disappearing after closing the preferences dialog</li>
 +          <li>Fixed COD database connection not being restored after program restart</li>
 +          <li>Improved default paths when selecting repository locations in the preferences dialog</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.2.3" date="2023-09-22">
-+      <description>
-+        <p>Bugfix and minor feature release</p>
-+        <ul>
-+          <li>Fixed accidentally enabled instrument configuration box in add-remove dialog</li>
-+          <li>Removed option to select composition mode of graphs</li>
-+          <li>Fixed filled color of graphs in dark mode</li>
-+          <li>Added custom wavelength selection to absorption coefficient dialog</li>
-+          <li>Added key sequences to navigate graphs</li>
-+          <li>Option to specify a local COD CIF repository instead of using the online repository.</li>
-+          <li>Show proper error message when downloading CIF files from COD fails</li>
-+          <li>New Tool to calculate lattice plane spacings</li>
-+          <li>Improved context help system</li>
-+          <li>Ignore mouse events on the graph outside the plot if they don't make sense</li>
-+          <li>Improved CIF import</li>
-+          <li>Fixed bug in GNR ESG files with negative 2theta values</li>
-+          <li>Fixed Rigaku XML import of files with multiple scans</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.2.2" date="2023-06-11">
-+      <description>
-+        <p>Bugfix and minor feature release</p>
-+        <ul>
-+          <li>Show iterations and Chi^2 in project list</li>
-+          <li>Context menu to show/hide columns in project list</li>
-+          <li>Fixed regression with search-match refusing to run due to missing instrument or wavelength selection despite using project settings</li>
-+          <li>Fixed regression with closing projects from project list context menu not working</li>
-+          <li>Removed option to select light or dark GUI theme from preferences</li>
-+          <li>Added option to select graph background color to preferences → Graph → Appearance</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.2.1" date="2023-05-09">
-+      <description>
-+        <p>Bugfix release</p>
-+        <ul>
-+          <li>moved configuration of COD database from structure import dialog to preferences dialog</li>
-+          <li>fixed issues with CIF import whe CIF files don't specify a phase name</li>
-+          <li>change scan color and style directly from context menu in plot options list</li>
-+          <li>fixed a crash when changing y-axis scaling on the fly, then changing scan styles in the preferences</li>
-+          <li>new function to export peak lists of all open projects at once</li>
-+          <li>fixed calculation of peak intensity in peak list</li>
-+          <li>improved filtering of peak list</li>
-+          <li>new import filter for all files (.) to auto-detect the format</li>
-+          <li>instrument selection boxes in add-remove dialog and search-match module are now editable and use auto-completion</li>
-+          <li>improved handling of instrument selection in add-remove dialog and search-match module when no specific instrument is selected</li>
-+          <li>fixed scan offsets randomly not being applied in plot options list</li>
-+          <li>minor GUI improvements</li>
-+          <li>context help text for additional modules added</li>
-+          <li>check for updates on Windows</li>
          </ul>
        </description>
      </release>
