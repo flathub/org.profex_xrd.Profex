@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 87f7c34..6356ca7 100644
+index 87f7c34..381c8ca 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -6,8 +6,10 @@
@@ -15,7 +15,66 @@ index 87f7c34..6356ca7 100644
    <summary>Open Source XRD and Rietveld Refinement</summary>
    <description>
      <p>
-@@ -53,157 +55,246 @@
+@@ -16,194 +18,259 @@
+   </description>
+   <screenshots>
+     <screenshot type="default">
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-01.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-01-Main-Window.png</image>
++      <caption>Raw data file</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-02.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-02-Search-Matchpng.png</image>
++      <caption>Search-match for phase identification</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-03.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-03-Create-Project.png</image>
++      <caption>Create refinement project</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-04.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-04-Project-file.png</image>
++      <caption>Refinement control file</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-05.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-05-Running-refinement.png</image>
++      <caption>Running refinement</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-06.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-06-Refinement-complete.png</image>
++      <caption>Refinement completed. Phase quantities shown in "Refined parameters" table.</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-07.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-07-Peak-List.png</image>
++      <caption>Peak list and refined chemical composition.</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-08.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-10-HTML-Report.png</image>
++      <caption>Create customizable HTML report</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-09.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-09-Retrieve-COD.png</image>
++      <caption>Retrieve structure files from COD database</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-10.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-08-Instrument-Editor.png</image>
++      <caption>Graphical instrument configuration editor</caption>
+     </screenshot>
+     <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-11.png</image>
+-    </screenshot>
+-    <screenshot>
+-      <image>https://www.profex-xrd.org/wp-content/uploads/2020/08/Galerie-42-12.png</image>
++      <image>https://www.profex-xrd.org/wp-content/uploads/2023/12/PX525-09-Electron-density.png</image>
++      <caption>Calculate electron density maps (Fcalc, Fobs, or difference fourier maps)</caption>
      </screenshot>
    </screenshots>
    <releases>
@@ -71,19 +130,22 @@ index 87f7c34..6356ca7 100644
 -    </description>
 -  </release>
 -    <release version="5.0.2" date="2022-05-21">
++    <release version="5.6.1" date="2025-11-30">
++      <description>
++        <p>New features</p>
++        <ul>
++          <li>Adds the name of the preset to the SAV file when creating a project from a preset.</li>
++        </ul>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Fixed regression that broke profile fitting in the synchrotron configurator.</li>
++          <li>Ignore commented STRUC[n] lines when opening all structure files.</li>
++          <li>Copy *.pxsml file to project directory when creating a new project from a synchrotron configuration.</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.6.0" date="2025-10-20">
-       <description>
--      <p>Minor feature upgrade</p>
--        <ul>
--          <li>Select scans by holding Shift and clicking on the graph</li>
--          <li>Fixed selection of scans during running refinements</li>
--          <li>Fixed regression with apply button in preferences dialog not working</li>
--          <li>New preference options to display only scans, only hkl lines, or both of refined phases</li>
--          <li>New scan styles: line with points or crosses, dashed line with points or crosses</li>
--          <li>Show / hide columns in the scan list</li>
--          <li>Don't ask for instrument / wavelength when peak searching on an existing project</li>
--          <li>Fixed certain wavelengths not being assigned to characteristic spectra correctly</li>
--          <li>Preserve the scale factor of hkl reference lines when selecting a new reference structure</li>
++      <description>
 +        <p>New features</p>
 +        <ul>
 +          <li>Graph display:</li>
@@ -207,32 +269,22 @@ index 87f7c34..6356ca7 100644
 +          <li>Fixed crash with Rigaku RAS files containing empty comment fields</li>
 +          <li>Fixed multi-scan DIA import</li>
 +          <li>GUI improvements in "format results" and "process dia files" tools</li>
-         </ul>
-       </description>
-     </release>
--    <release version="5.0.1" date="2022-03-13">
++        </ul>
++      </description>
++    </release>
 +    <release version="5.3.0" date="2024-06-22">
        <description>
--      <p>Major feature upgrade</p>
+-      <p>Minor feature upgrade</p>
 -        <ul>
--          <li>Removed option to customize quantity goal nomenclature in preferences</li>
--          <li>Automatically run verification when opening CIF files in the structure import dialog</li>
--          <li>Automatically run indexing when closing the structure import dialog</li>
--          <li>Improved scan-math help dialog</li>
--          <li>Better handling of settings in all dock window modules (search-match, peak fitting, peak list etc)</li>
--          <li>Disabled selection of instrument and wavelength in search-match module when runnig search-match on an existing project</li>
--          <li>Fixed calculation of Rexp in convergence progress window</li>
--          <li>Removed the menu option to hide hkl indices</li>
--          <li>Added a reload button to the peak list table</li>
--          <li>Fixed inconsistent behaviour of view -> show / hide phase patterns</li>
--          <li>Fixed phase duplication in search-match window when creating a project from pinned phases</li>
--          <li>Fixed encoding bug in import filter for binary raw data formats (also fixes issues with SVG export and refinement reports)</li>
--          <li>Displace scans also when EPSn values are hard-coded</li>
--          <li>Dixed regression with copying graphs to clipboard not working</li>
--          <li>Selection, activation, and export of multiple scans from scan list</li>
--          <li>Sorting of projects, scans, and waterfall scans by drag-and-drop</li>
--          <li>Waterfall plot accepts drop events</li>
--          <li>Fixed various drawing issues in waterfall plot dialog</li>
+-          <li>Select scans by holding Shift and clicking on the graph</li>
+-          <li>Fixed selection of scans during running refinements</li>
+-          <li>Fixed regression with apply button in preferences dialog not working</li>
+-          <li>New preference options to display only scans, only hkl lines, or both of refined phases</li>
+-          <li>New scan styles: line with points or crosses, dashed line with points or crosses</li>
+-          <li>Show / hide columns in the scan list</li>
+-          <li>Don't ask for instrument / wavelength when peak searching on an existing project</li>
+-          <li>Fixed certain wavelengths not being assigned to characteristic spectra correctly</li>
+-          <li>Preserve the scale factor of hkl reference lines when selecting a new reference structure</li>
 +        <p>Feature and bug fix release</p>
 +        <ul>
 +          <li>New mouse context menu actions to refine or fix all fractional coordinates</li>
@@ -260,11 +312,32 @@ index 87f7c34..6356ca7 100644
 +          <li>New smooting algorithm using discrete cosine transform (DCT) in smoothing dialog</li>
 +          <li>Zlib updated</li>
 +          <li>More key actions added to scan list</li>
-+        </ul>
-+      </description>
-+    </release>
+         </ul>
+       </description>
+     </release>
+-    <release version="5.0.1" date="2022-03-13">
 +    <release version="5.2.9" date="2024-05-11">
-+      <description>
+       <description>
+-      <p>Major feature upgrade</p>
+-        <ul>
+-          <li>Removed option to customize quantity goal nomenclature in preferences</li>
+-          <li>Automatically run verification when opening CIF files in the structure import dialog</li>
+-          <li>Automatically run indexing when closing the structure import dialog</li>
+-          <li>Improved scan-math help dialog</li>
+-          <li>Better handling of settings in all dock window modules (search-match, peak fitting, peak list etc)</li>
+-          <li>Disabled selection of instrument and wavelength in search-match module when runnig search-match on an existing project</li>
+-          <li>Fixed calculation of Rexp in convergence progress window</li>
+-          <li>Removed the menu option to hide hkl indices</li>
+-          <li>Added a reload button to the peak list table</li>
+-          <li>Fixed inconsistent behaviour of view -> show / hide phase patterns</li>
+-          <li>Fixed phase duplication in search-match window when creating a project from pinned phases</li>
+-          <li>Fixed encoding bug in import filter for binary raw data formats (also fixes issues with SVG export and refinement reports)</li>
+-          <li>Displace scans also when EPSn values are hard-coded</li>
+-          <li>Dixed regression with copying graphs to clipboard not working</li>
+-          <li>Selection, activation, and export of multiple scans from scan list</li>
+-          <li>Sorting of projects, scans, and waterfall scans by drag-and-drop</li>
+-          <li>Waterfall plot accepts drop events</li>
+-          <li>Fixed various drawing issues in waterfall plot dialog</li>
 +        <p>Bugfix release</p>
 +        <ul>
 +          <li>Fixed wrong symmetry operands in exported CIF files</li>
@@ -351,52 +424,6 @@ index 87f7c34..6356ca7 100644
 +        <ul>
 +          <li>Fixed random crashes on Mac M2 platform (and maybe others)</li>
 +          <li>Fixed crash when closing projects while the last tab with a text file is shown</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.2.6" date="2024-02-10">
-+      <description>
-+        <p>Bugfix and minor feature release</p>
-+        <ul>
-+          <li>Phase selection is saved and resored in peak list filter presets</li>
-+          <li>Single-peak refinement projects</li>
-+          <li>Fixed bug in CIF parser with HM symbols containing the setting or origin</li>
-+          <li>Fixed bugs in generation of instrument template files</li>
-+          <li>Fixed linear background drawing in peak integrals with sqrt or log10 y-axis scaling</li>
-+          <li>Draw the active region of peak fits</li>
-+          <li>Added refinement toggling for B2 parameter</li>
-+          <li>Disabled „reset file“ for BGMN projects</li>
-+          <li>Increase file name when adding more than one amorphous peak</li>
-+          <li>New import filter for CHI files</li>
-+          <li>Fixed bug in search-match module refusing to run with synchrotron radiation</li>
-+          <li>Phase selection is saved and restored in peak list filter presets</li>
-+          <li>Improved context help text</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.2.5" date="2023-12-29">
-+      <description>
-+        <p>Bugfix and minor feature release</p>
-+        <ul>
-+          <li>New manual base line in tools - add baseline</li>
-+          <li>Save peak list filters in presets</li>
-+          <li>Apply peak list filters to other projects</li>
-+          <li>List *.xye files in ASCII import filter</li>
-+          <li>Copy instrument sav and tpl files when applying control files to other projects</li>
-+          <li>Fixed tab order in some instrument dialog pages</li>
-+          <li>New import filter for Thermo Fisher TXL file format</li>
-+          <li>Improved recognition of typos in syntax highlighter</li>
-+          <li>Fixed phase names imported from COD files that only contain numeric values</li>
-+        </ul>
-+      </description>
-+    </release>
-+    <release version="5.2.4" date="2023-10-26">
-+      <description>
-+        <p>Bugfix and minor feature release</p>
-+        <ul>
-+          <li>Fixed icons disappearing after closing the preferences dialog</li>
-+          <li>Fixed COD database connection not being restored after program restart</li>
-+          <li>Improved default paths when selecting repository locations in the preferences dialog</li>
          </ul>
        </description>
      </release>
