@@ -1,6 +1,6 @@
 app-id: org.profex_xrd.Profex
 runtime: org.kde.Platform
-runtime-version: '6.10'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
 command: profex
 rename-icon: profex5
@@ -55,18 +55,14 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2026/06/profex-5.7.0.tar.gz
-        sha256: 5f480d21b86838f23cfc266222cb5198327717bda2c2047288568af6dceab73b
+        url: https://www.profex-xrd.org/wp-content/uploads/2026/07/profex-5.7.1.tar.gz
+        sha256: e73c8720f61b392d070a8324ca86dbb5c8df6c3e7e48c7e309292cd18df0175b
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
           pattern: (https://www.profex-xrd.org/.+/profex-([\d\.]+\d).tar.gz)
       - type: patch
         path: bgmnbackendconfig.patch
-      - type: patch
-        path: appdata.patch
-      - type: patch
-        path: desktop.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
