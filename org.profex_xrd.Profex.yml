@@ -56,7 +56,7 @@ modules:
     sources:
       - type: archive
         url: https://www.profex-xrd.org/wp-content/uploads/2026/07/profex-5.7.1.tar.gz
-        sha256: 3241d85e4db8a94629a8cffa08820904e91cc755f41e705f9f51cc911432ca8d
+        sha256: e73c8720f61b392d070a8324ca86dbb5c8df6c3e7e48c7e309292cd18df0175b
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
