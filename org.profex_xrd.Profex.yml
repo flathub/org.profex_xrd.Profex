@@ -63,10 +63,6 @@ modules:
           pattern: (https://www.profex-xrd.org/.+/profex-([\d\.]+\d).tar.gz)
       - type: patch
         path: bgmnbackendconfig.patch
-      - type: patch
-        path: appdata.patch
-      - type: patch
-        path: desktop.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
