@@ -1,0 +1,30 @@
+diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
+index 7b7adf8..d68c8d0 100644
+--- a/org.profex_xrd.Profex.appdata.xml
++++ b/org.profex_xrd.Profex.appdata.xml
+@@ -64,6 +64,25 @@
+     </screenshot>
+   </screenshots>
+   <releases>
++    <release version="5.7.2" date="2026-08-23">
++      <description>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Fixed regression in Synchrotron Configurator to restore profile fitting function</li>
++          <li>Minor improvements in scan drawing using double precision</li>
++          <li>Fixed bug letting one settings string grow exponentially</li>
++          <li>Fixed asymmetric cross symbols in scan drawing</li>
++          <li>Fixed wrong wavelength when loading DIA files</li>
++          <li>Improved behavior of spin box editor in plot options widget</li>
++          <li>Scroll to the beginning of the output procotol after completing a peak fit</li>
++          <li>Restore header geometry in project select dialog</li>
++          <li>Fixed handling of eps values for scan drawing</li>
++          <li>Use higher resolution of 2theta values read from brml files</li>
++          <li>Changed xy export format and adapted xy import filter accordingly</li>
++          <li>Fixed selection mode of peak fitting widget</li>
++        </ul>
++      </description>
++    </release>
+     <release version="5.7.1" date="2026-07-05">
+       <description>
+         <p>New features</p>
