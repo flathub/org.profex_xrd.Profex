@@ -55,14 +55,16 @@ modules:
         - QMAKEPATH=/app/lib
     sources:
       - type: archive
-        url: https://www.profex-xrd.org/wp-content/uploads/2026/07/profex-5.7.1.tar.gz
-        sha256: e73c8720f61b392d070a8324ca86dbb5c8df6c3e7e48c7e309292cd18df0175b
+        url: https://www.profex-xrd.org/wp-content/uploads/2026/08/profex-5.7.2.tar.gz
+        sha256: a732b833c075b38f88749abee1006b410ec5cf72f35d901421f318892a8615dc
         x-checker-data:
           type: html
           url: https://www.profex-xrd.org/download/linux-2/
           pattern: (https://www.profex-xrd.org/.+/profex-([\d\.]+\d).tar.gz)
       - type: patch
         path: bgmnbackendconfig.patch
+      - type: patch
+        path: appdata.patch
     post-install:
       - mv ${FLATPAK_BUILDER_BUILDDIR}/bin /app
       - install -Dv ${FLATPAK_BUILDER_BUILDDIR}/profex5.desktop -t /app/share/applications
