@@ -1,5 +1,5 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 7b7adf8..45779d3 100644
+index 7b7adf8..5a2ae00 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
 @@ -64,6 +64,43 @@
@@ -10,7 +10,7 @@ index 7b7adf8..45779d3 100644
 +      <description>
 +        <p>Bug fixes</p>
 +        <ul>
-+          <li>Fixed a bug in the conversion module for ADS <-> FDS</li>
++          <li>Fixed a bug in the conversion module for ADS <=> FDS</li>
 +          <li>Changed the file filter description for Bruker raw files</li>
 +          <li>Fixed regression causing *.txt files not being recognized as ASCII graphs anymore</li>
 +          <li>Data point decimation for drawing of very large datasets added</li>
