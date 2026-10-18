@@ -1,11 +1,29 @@
 diff --git a/org.profex_xrd.Profex.appdata.xml b/org.profex_xrd.Profex.appdata.xml
-index 7b7adf8..d68c8d0 100644
+index 7b7adf8..45779d3 100644
 --- a/org.profex_xrd.Profex.appdata.xml
 +++ b/org.profex_xrd.Profex.appdata.xml
-@@ -64,6 +64,25 @@
+@@ -64,6 +64,43 @@
      </screenshot>
    </screenshots>
    <releases>
++    <release version="5.7.3" date="2026-10-16">
++      <description>
++        <p>Bug fixes</p>
++        <ul>
++          <li>Fixed a bug in the conversion module for ADS <-> FDS</li>
++          <li>Changed the file filter description for Bruker raw files</li>
++          <li>Fixed regression causing *.txt files not being recognized as ASCII graphs anymore</li>
++          <li>Data point decimation for drawing of very large datasets added</li>
++          <li>Multi-selections in Project Select dialog and a button to toggle selected projects added</li>
++          <li>New option added to Excel export dialog to query the Excel file at the time of export</li>
++          <li>Context help in Excel export dialog added</li>
++        </ul>
++        <p>For Mac OS X users</p>
++        <ul>
++          <li>This version temporarily uses the „Fusion“ theme to work around an incompatibility between Qt 6.12.0 and OS X 27. It looks a bit foreign on OS X, but the look will revert to the standard theme as soon as a fix is available in Qt.</li>
++        </ul>
++      </description>
++    </release>
 +    <release version="5.7.2" date="2026-08-23">
 +      <description>
 +        <p>Bug fixes</p>
